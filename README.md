@@ -111,6 +111,12 @@ QR Codes:
 
 | PayPal                                                     | Venmo.                                                     | WeChat                                               |
 | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
-| ![PayPal_160](http://7.daliansky.net/wechatpay_160.jpg)    | ![venmo_160](http://7.daliansky.net/wechatpay_160.jpg)     | ![Wechat_160](http://7.daliansky.net/alipay_160.jpg) |
+| ![PayPal_160](
+        MatebookXPro-hackintosh/Help a Broke Student out/paypal.png
+      )    | ![venmo_160](
+        MatebookXPro-hackintosh/Help a Broke Student out/venmo.jpg
+      )     | ![Wechat_160](
+        MatebookXPro-hackintosh/Help a Broke Student out/WeChat.jpg
+      ) |
 
 Good Luck!
