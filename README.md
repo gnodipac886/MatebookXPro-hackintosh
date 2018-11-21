@@ -81,7 +81,7 @@ Mount EFI partition if not mounted already
 
 Clone the repository via terminal or download it and swap the CLOVER folder downloaded for the one in your EFI directory.
 
-***Note if you have the i5 version, or any other configuration of the laptop sold 		exclusively in China***, you should:
+***Note if you have the i5 version, or any other configurations of the laptop sold exclusively in China***, you should:
 - delete the DSDT.aml file in /Volumes/EFI/EFI/CLOVER/ACPI/patched and generate your own via pressing f4 	at the clover bootscreen.
 - For i5 models: you have to make a custom CPUFriendProvider for Power Management by following this 		guide:
 	https://github.com/PMheart/CPUFriend/blob/master/Instructions.md
