@@ -59,7 +59,7 @@ https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-w
 I ended up wiping windows and installing it afterwards, if you do so, fingerprint sensor will stop working, please follow the guide from this link:
 http://bradshacks.com/matebook-x-pro-fingerprint/
 
-***Set config.plist/Graphics/ig-platform-id=0x12345678 for installation.
+***Set config.plist/Graphics/ig-platform-id=0x12345678 for installation.***
 
 Install macOS according to post 2 of the guide:
 https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
@@ -103,4 +103,4 @@ Credits:
 
 Help a broke student out:
 - Paypal:
-	paypal.me/gnodipac886# MatebookXPro-hackintosh
+	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
