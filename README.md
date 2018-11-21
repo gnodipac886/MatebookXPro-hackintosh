@@ -60,10 +60,12 @@ http://www.tonymacx86.com/multi-booting/133940-mavericks-windows-8-same-drive-wi
 This guide for creating USB and installing using Clover UEFI works well for this laptop: 
 https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
 
-I ended up wiping windows and installing it afterwards, if you do so, fingerprint sensor will stop working, please follow the guide from this link:
-http://bradshacks.com/matebook-x-pro-fingerprint/
+For the installation purposes, please use the HD620 plist that rehabman provides in his guide for your installation USB.
 
 ***Set config.plist/Graphics/ig-platform-id=0x12345678 for installation.***
+
+I ended up wiping windows and installing it afterwards, if you do so, fingerprint sensor will stop working, please follow the guide from this link:
+http://bradshacks.com/matebook-x-pro-fingerprint/
 
 Install macOS according to post 2 of the guide:
 https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
