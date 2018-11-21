@@ -4,4 +4,4 @@
 
 | WeChat                                               |
 | ---------------------------------------------------- |
-| ![Wechat_160](http://7.daliansky.net/alipay_160.jpg) |
+| ![Wechat_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/WeChat.jpg) |
