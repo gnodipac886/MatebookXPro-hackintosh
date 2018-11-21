@@ -1,6 +1,8 @@
 # Matebook X Pro Hackintosh
 This is the guide to install macOS onto the Huawei Matebook X Pro.
 
+Feel free to help a broke student out at the bottom of the page. :)
+
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
 
 ***DISCLAIMER***
@@ -34,14 +36,14 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 
 ## Let's Get Started
 
-## What you need:
+# What you need:
 - Huawei Matebook X Pro (either i7 or i5 model, though i5 model has not been tested)
 - macOS or OS X downloaded from the Mac App Store
 - 8GB USB stick
 - External USB Wifi Dongle
 - USB C dock (for connecting to external mouse for initial setup)
 
-### BIOS Settings
+# BIOS Settings
 - f2 is for booting into BIOS
 - f12 is for boot override
 - Any version of the BIOS is good, but I'm version 1.18
@@ -103,7 +105,7 @@ Known Problems and Partial Solutions:
 - Spanish Matebook X Pro Hackintosh community
 - All the developers who developed the kexts used in this guide.
 
-## Help a broke student out:
+### Help a broke student out:
 - PayPal:
 	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
 - Venmo:
