@@ -1,4 +1,4 @@
-# MatebookXPro Hackintosh
+# Matebook X Pro Hackintosh
 This is the guide to install macOS onto the Huawei Matebook X Pro.
 
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
