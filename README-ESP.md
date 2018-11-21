@@ -1,6 +1,6 @@
 # Guía para Huawei Matebook X Pro hackintosh
 
-Estoy escribiendo la guía en Español
+Estoy traduciendo la guía al Español
 
 Por favor ten paciencia
 
