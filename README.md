@@ -108,6 +108,7 @@ Known Problems and Partial Solutions:
 	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
 - Venmo:
 	https://venmo.com/code?user_id=2386577070227456090
+	
 QR Codes:
 
 | PayPal                                                     | Venmo.                                                     | WeChat                                               |
