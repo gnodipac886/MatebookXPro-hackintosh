@@ -24,6 +24,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - HDMI + Thunderbolt 3 (TB3 at least works as a display output, not sure about other functionality)
 - Camera support up to 10.14.0
 - Trackpad and Native Gestures via VoodooI2c (Four fingers support is not well implemented, please 	try using five fingers as a substitution)
+- Touchscreen with multi-touch capabilities (think of it as a large trackpad)
 - Battery Percentage (via ACPIBatteryManager)
 - Bluetooth (Not stable, further examination is required)
 - Power Management (via CPUFriend and CPUFriendProvider, CPU idles at 1.2Ghz though Windows idles 	at 0.8Ghz, needs improvement)(kext taken from TheDarkVoid's Dell XPS 9360 guide)
