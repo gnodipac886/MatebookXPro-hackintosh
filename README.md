@@ -1,6 +1,7 @@
 # MatebookXPro-hackintosh
 This is the guide to install macOS onto the Huawei Matebook X Pro.
 
+[English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
 ***DISCLAIMER***
 The project is still in its beta/testing state.
 Proceed at your own risk, I shall not take responsibility for any damages caused.
@@ -79,7 +80,7 @@ Mount EFI partition if not mounted already
 
 Clone the repository via terminal or download it and swap the CLOVER folder downloaded for the one in your EFI directory.
 
-***Note if you have the i5 version, or any other configuration of the laptop sold exclusively in China, you should:
+***Note if you have the i5 version, or any other configuration of the laptop sold 		exclusively in China***, you should:
 - delete the DSDT.aml file in /Volumes/EFI/EFI/CLOVER/ACPI/patched and generate your own via pressing f4 	at the clover bootscreen.
 - For i5 models: you have to make a custom CPUFriendProvider for Power Management by following this 		guide:
 	https://github.com/PMheart/CPUFriend/blob/master/Instructions.md
@@ -102,5 +103,9 @@ Credits:
 - All the developers who developed the kexts used in this guide.
 
 Help a broke student out:
-- Paypal:
+- PayPal:
 	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
+QR Codes:
+| PayPal                                                     | Venmo.                                                     | WeChat                                               |
+| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
+| ![PayPal_160](http://7.daliansky.net/wechatpay_160.jpg)    | ![venmo_160](http://7.daliansky.net/wechatpay_160.jpg)     | ![Wechat_160](http://7.daliansky.net/alipay_160.jpg) |
