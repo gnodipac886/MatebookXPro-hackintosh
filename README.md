@@ -34,7 +34,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 
 ## Let's Get Started
 
-## #What you need:
+## What you need:
 - Huawei Matebook X Pro (either i7 or i5 model, though i5 model has not been tested)
 - macOS or OS X downloaded from the Mac App Store
 - 8GB USB stick
