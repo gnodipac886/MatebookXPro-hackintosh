@@ -27,12 +27,14 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - Battery Percentage (via ACPIBatteryManager)
 - Bluetooth (Not stable, further examination is required)
 - Power Management (via CPUFriend and CPUFriendProvider, CPU idles at 1.2Ghz though Windows idles 	at 0.8Ghz, needs improvement)(kext taken from TheDarkVoid's Dell XPS 9360 guide)
+- Wifi via USB dongle
 
 ## What doesn't Work:
 - Brightness and Sleep (Likely due to spoofing Coffeelake Graphics)
 - dGPU (Nvidia Optimus not supported on MacOS)
 - eGPU (not tested)
 - Fingerprint Sensor
+- Intel Wifi (soldered onto the motherbaord)
 
 ## Let's Get Started
 
