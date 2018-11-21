@@ -112,11 +112,11 @@ QR Codes:
 | PayPal                                                     | Venmo.                                                     | WeChat                                               |
 | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
 | ![PayPal_160](
-        MatebookXPro-hackintosh/Help a Broke Student out/paypal.png
+        https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true
       )    | ![venmo_160](
-        MatebookXPro-hackintosh/Help a Broke Student out/venmo.jpg
+        https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true
       )     | ![Wechat_160](
-        MatebookXPro-hackintosh/Help a Broke Student out/WeChat.jpg
+        https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/WeChat.jpg
       ) |
 
 Good Luck!
