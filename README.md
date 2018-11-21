@@ -13,7 +13,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - Nvidia GTX MX 150 / Intel UHD 620
 - 3K display @ 3000x2000
 - 512 Gb Toshiba SSD (Not tested on Liteon SSDs yet)
-- USB Wi-fi: Edimax N150
+- USB Wifi: Edimax N150
 
 ## What works:
 - Intel UHD 620 Graphics Acceleration (we are using a CoffeeLake platform-id for now, will try to 	switch to native Kabylake graphics)
