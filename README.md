@@ -1,7 +1,8 @@
-# MatebookXPro-hackintosh
+# MatebookXPro Hackintosh
 This is the guide to install macOS onto the Huawei Matebook X Pro.
 
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
+
 ***DISCLAIMER***
 The project is still in its beta/testing state.
 Proceed at your own risk, I shall not take responsibility for any damages caused.
@@ -109,3 +110,5 @@ QR Codes:
 | PayPal                                                     | Venmo.                                                     | WeChat                                               |
 | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
 | ![PayPal_160](http://7.daliansky.net/wechatpay_160.jpg)    | ![venmo_160](http://7.daliansky.net/wechatpay_160.jpg)     | ![Wechat_160](http://7.daliansky.net/alipay_160.jpg) |
+
+Good Luck!
