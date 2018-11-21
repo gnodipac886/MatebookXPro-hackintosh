@@ -7,7 +7,7 @@ This is the guide to install macOS onto the Huawei Matebook X Pro.
 The project is still in its beta/testing state.
 Proceed at your own risk, I shall not take responsibility for any damages caused.
 
-##My Matebook X Pro's Hardware Configuration:
+## My Matebook X Pro's Hardware Configuration:
 - CPU: i7-8550U @ 1.8GHz
 - 16GB RAM
 - Nvidia GTX MX 150 / Intel UHD 620
@@ -15,7 +15,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - 512 Gb Toshiba SSD (Not tested on Liteon SSDs yet)
 - USB Wi-fi: Edimax N150
 
-##What works:
+## What works:
 - Intel UHD 620 Graphics Acceleration (we are using a CoffeeLake platform-id for now, will try to 	switch to native Kabylake graphics)
 - Realtek alc256 Audio via VoodooHDA (please help generate a custom AppleHda layout if you want to 	help, right now all existing layouts makes the tweeters work)
 - Keyboard with Volume Controls (via VoodooPS2)
@@ -26,22 +26,22 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - Bluetooth (Not stable, further examination is required)
 - Power Management (via CPUFriend and CPUFriendProvider, CPU idles at 1.2Ghz though Windows idles 	at 0.8Ghz, needs improvement)(kext taken from TheDarkVoid's Dell XPS 9360 guide)
 
-##What doesn't Work:
+## What doesn't Work:
 - Brightness and Sleep (Likely due to spoofing Coffeelake Graphics)
 - dGPU (Nvidia Optimus not supported on MacOS)
 - eGPU (not tested)
 - Fingerprint Sensor
 
-##Let's Get Started
+## Let's Get Started
 
-###What you need:
+## #What you need:
 - Huawei Matebook X Pro (either i7 or i5 model, though i5 model has not been tested)
 - macOS or OS X downloaded from the Mac App Store
 - 8GB USB stick
 - External USB Wifi Dongle
 - USB C dock (for connecting to external mouse for initial setup)
 
-###BIOS Settings
+### BIOS Settings
 - f2 is for booting into BIOS
 - f12 is for boot override
 - Any version of the BIOS is good, but I'm version 1.18
@@ -49,7 +49,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - Disable Secure boot
 - Matebook's BIOS is rewrite protected, EFI tool is useless against this BIOS.
 
-##Pre-Install:
+## Pre-Install:
 Prior to installing macOS, it is a good idea to backup any important files on Windows.
 
 You can also leave Windows intact, but it can get tricky. Read here for more information: 
@@ -96,14 +96,14 @@ Known Problems and Partial Solutions:
 - Sleep doesn't work: after waking from a sleep (closing the lid), your computer will wake and you will 	see a graphics glitch. This should be due to Coffeelake spoofing. We are trying to fix this. 
 - Bluetooth: you will need a copy of 10.13.6's IOBluetoothFamily.kext and install it to S/L/E via 		kextbeast.
 
-###Credits:
+### Credits:
 - Darren_Pan on reddit
 - midi and Maemo on discord
 - Chinese Matebook X Pro Hackintosh community
 - Spanish Matebook X Pro Hackintosh community
 - All the developers who developed the kexts used in this guide.
 
-##Help a broke student out:
+## Help a broke student out:
 - PayPal:
 	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
 
