@@ -10,46 +10,48 @@ Por favor ten paciencia
 
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
 
-***DISCLAIMER***
+***RENUNCIA***
+
 Este proyecto está todavia en el estado de prueba.
 Continúa bajo su cuenta y riesgo.
 
 ## La Configuración de mi Matebook X Pro :
 - CPU: i7-8550U @ 1.8GHz
 - 16GB RAM
-- Nvidia GTX MX 150 / Intel UHD 620
-- 3K display @ 3000x2000
-- 512 Gb Toshiba SSD (No he probado todavía los SSDs de liteon)
+- Nvidia GTX MX150 / Intel UHD 620
+- 3K pantalla @ 3000x2000
+- 512 Gb Toshiba SSD (No he probado todavía los SSDs de Liteon)
 - USB Wifi: Edimax N150
 
 ## Los que funciona:
-- Intel UHD 620 Graphics Acceleration (Ahora estamos usando un platform-id CoffeeLake, cambiaremos al Kabylake graphics en el futuro)
-- Realtek alc256 Audio con VoodooHDA (please help generate a custom AppleHda layout if you want to help, right now all existing layouts makes the tweeters work)
-- Keyboard with Volume Controls (via VoodooPS2)
-- HDMI + Thunderbolt 3 (TB3 at least works as a display output, not sure about other functionality)
-- Camera support up to 10.14.0
-- Trackpad and Native Gestures via VoodooI2c (Four fingers support is not well implemented, please try using five fingers as a substitution)
-- Touchscreen with multi-touch capabilities (think of it as a large trackpad)
-- Battery Percentage (via ACPIBatteryManager)
-- Bluetooth (Not stable, further examination is required)
-- Power Management (via CPUFriend and CPUFriendProvider, CPU idles at 1.2Ghz though Windows idles at 0.8Ghz, needs improvement)(kext taken from TheDarkVoid's Dell XPS 9360 guide)
-- Wifi via USB dongle
+- Aceleración de Intel UHD 620 gráficos (Ahora estamos usando un platform-id CoffeeLake, cambiaremos al Kabylake gráficos en el futuro)
+- Realtek alc256 Audio con VoodooHDA
+- Teclado con control de volumen (via VoodooPS2)
+- HDMI + Thunderbolt 3 (TB3 pro lo menos trabaja como una salida de video, No sé de otras funcionalidades como eGPU)
+- Apoyo de la cámara 10.14.0
+- Trackpad con nativo gestos via VoodooI2c (usa gestos de cinco dedos como una substit)
+- Pantalla táctil (La utilíza como un trackpad grande)
+- porcentaje de batería (con ACPIBatteryManager)
+- Bluetooth (Not es estable, tiene que reincinar el ordenador desde Windows a macOS)
+- administración de energía (con CPUFriend and CPUFriendProvider)
+- Wifi con USB
 
-## What doesn't Work:
-- Brightness and Sleep (Likely due to spoofing Coffeelake Graphics)
-- dGPU (Nvidia Optimus not supported on MacOS)
-- eGPU (not tested)
-- Fingerprint Sensor
-- Intel Wifi (soldered onto the motherbaord)
+## Los que no funciona:
+- Brillo y modo suspensión (La causa es probablemente Coffeelake gráficos)
+- dGPU (No se apoya Nvidia Optimus en MacOS)
+- eGPU (no he probado)
+- sensor de huellas dactilares
+- Interno Intel Wifi
 
-## Let's Get Started
+## Vamonos!
 
-### What you need:
-- Huawei Matebook X Pro (either i7 or i5 model, though i5 model has not been tested)
-- macOS or OS X downloaded from the Mac App Store
-- 8GB USB stick
-- External USB Wifi Dongle
-- USB C dock (for connecting to external mouse for initial setup)
+### Lo que necesitas:
+- Huawei Matebook X Pro (i7 o i5, no he probado macOS en el i5)
+- macOS 10.14.0+
+- 8GB USB
+- USB Wifi externo
+- Estación USB C (para conectar a un ratón external)
+- un ratón
 
 ### BIOS Settings
 - f2 is for booting into BIOS
