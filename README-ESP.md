@@ -54,15 +54,15 @@ Continúa bajo su cuenta y riesgo.
 - un ratón
 
 ### BIOS Settings
-- f2 is for booting into BIOS
-- f12 is for boot override
-- Any version of the BIOS is good, but I'm version 1.18
-- Restore Defaults
-- Disable Secure boot
-- Matebook's BIOS is rewrite protected, EFI tool is useless against this BIOS.
+- f2 es para prender a BIOS
+- f12 es para cambiar el aparato de boot
+- Qualquier versión de BIOS es bueno, pero estoy usando el 1.18
+- Restaura el valor de defecto
+- Apaga Secure boot
+- No se permite cambiar los valores como DVMT del BIOS de Matebook, no se puede EFI tool.
 
-## Pre-Install:
-Prior to installing macOS, it is a good idea to backup any important files on Windows.
+## Pre-Instalar:
+Antes de instalar macOS, es una buena idea a hacer una copia de seguridad de tus archivos en Windows.
 
 You can also leave Windows intact, but it can get tricky. Read here for more information: 
 http://www.tonymacx86.com/multi-booting/133940-mavericks-windows-8-same-drive-without-erasing.html
