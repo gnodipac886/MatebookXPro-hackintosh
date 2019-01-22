@@ -126,7 +126,7 @@ Good Luck!
 
 # Updates
 
-### 1/21
+### 1/21/2019
 - New Whatevergreen replaced old custom version
 - Lilu updated
 - New Applealc to support native audio codec
