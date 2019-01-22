@@ -10,6 +10,7 @@
 
 #include <Headers/kern_config.hpp>
 #include <Headers/kern_compat.hpp>
+#include <Headers/kern_atomic.hpp>
 
 #include <libkern/libkern.h>
 #include <libkern/OSDebug.h>
@@ -566,10 +567,112 @@ struct Page {
 };
 
 /**
+ *  Thread specific container of T values in up to N threads
+ */
+template <typename T, size_t N>
+class ThreadLocal {
+	/**
+	 *  A list of tread identifiers
+	 */
+	_Atomic(thread_t) threads[N];
+
+	/**
+	 *  A list of value references
+	 */
+	T values[N] {};
+
+public:
+	/**
+	 *  Initialise storage
+	 *
+	 *  @return true on success
+	 */
+	void init() {
+		for (auto &thread : threads)
+			atomic_init(&thread, nullptr);
+	}
+
+	/**
+	 *  Deinitialise storage
+	 */
+	void deinit() {
+		for (size_t i = 0; i < N; i++) {
+			atomic_store_explicit(&threads[i], nullptr, memory_order_relaxed);
+			values[i] = {};
+		}
+	}
+
+	/**
+	 *  Set or overwrite thread specific value
+	 *
+	 *  @param value  value to store
+	 *
+	 *  @return true on success
+	 */
+	bool set(T value) {
+		auto currThread = current_thread();
+		T *ptr = nullptr;
+
+		// Find previous value if any
+		for (size_t i = 0; ptr == nullptr && i < N; i++)
+			if (atomic_load_explicit(&threads[i], memory_order_acquire) == currThread)
+				ptr = &values[i];
+
+		// Find null value if any
+		for (size_t i = 0; ptr == nullptr && i < N; i++) {
+			thread_t nullThread = nullptr;
+			if (atomic_compare_exchange_strong_explicit(&threads[i], &nullThread, currThread,
+				memory_order_acq_rel, memory_order_acq_rel))
+				ptr = &values[i];
+		}
+
+		// Insert if we can
+		if (ptr) *ptr = value;
+
+		return ptr != nullptr;
+	}
+
+	/**
+	 *  Get thread specific value
+	 *
+	 *  @return pointer to stored value on success
+	 */
+	T *get() {
+		auto currThread = current_thread();
+
+		for (size_t i = 0; i < N; i++)
+			if (atomic_load_explicit(&threads[i], memory_order_acquire) == currThread)
+				return &values[i];
+
+		return nullptr;
+	}
+
+	/**
+	 *  Unset thread specific value if present
+	 *
+	 *  @return true on success
+	 */
+	bool erase() {
+		auto currThread = current_thread();
+
+		for (size_t i = 0; i < N; i++) {
+			if (atomic_load_explicit(&threads[i], memory_order_acquire) == currThread) {
+				values[i] = {};
+				thread_t nullThread = nullptr;
+				return atomic_compare_exchange_strong_explicit(&threads[i], &currThread,
+					nullThread, memory_order_acq_rel, memory_order_acq_rel);
+			}
+		}
+
+		return false;
+	}
+};
+
+/**
  *  Use this deleter when storing scalar types
  */
 template <typename T>
-static void emptyDeleter(T) {}
+static void emptyDeleter(T) { /* no dynamic alloc */ }
 
 template <typename T, typename Y, void (*deleterT)(T)=emptyDeleter<T>, void (*deleterY)(Y)=emptyDeleter<Y>>
 struct ppair {
@@ -658,13 +761,13 @@ public:
 	 *
 	 *  @return elements ptr or null
 	 */
-	template <size_t Mul = 1>
+	template <size_t MUL = 1>
 	T *reserve(size_t num) {
 		if (rsvd < num) {
-			T *nPtr = static_cast<T *>(kern_os_realloc(ptr, Mul * num * sizeof(T)));
+			T *nPtr = static_cast<T *>(kern_os_realloc(ptr, MUL * num * sizeof(T)));
 			if (nPtr) {
 				ptr = nPtr;
-				rsvd = Mul * num;
+				rsvd = MUL * num;
 			} else {
 				return nullptr;
 			}
@@ -701,9 +804,9 @@ public:
 	 *
 	 *  @return true on success
 	 */
-	template <size_t Mul = 1>
+	template <size_t MUL = 1>
 	bool push_back(T &element) {
-		if (reserve<Mul>(cnt+1)) {
+		if (reserve<MUL>(cnt+1)) {
 			ptr[cnt] = element;
 			cnt++;
 			return true;
@@ -720,9 +823,9 @@ public:
 	 *
 	 *  @return true on success
 	 */
-	template <size_t Mul = 1>
+	template <size_t MUL = 1>
 	bool push_back(T &&element) {
-		if (reserve<Mul>(cnt+1)) {
+		if (reserve<MUL>(cnt+1)) {
 			ptr[cnt] = element;
 			cnt++;
 			return true;
@@ -788,9 +891,9 @@ inline constexpr char getBuildMonth() {
 			return "11"[i];
 		case ' ceD':
 			return "12"[i];
+		default:
+			return '0';
 	}
-
-	return '0';
 }
 
 template <size_t i>

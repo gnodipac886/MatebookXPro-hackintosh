@@ -1,78 +1,86 @@
-10:013  2:756  Found UEFI Acpi 2.0 RSDP at 6FFFD014
-10:013  0:000  Saving ACPI tables from RSDP 6FFFD014 to EFI\CLOVER\ACPI\origin ...
-10:013  0:000   6FFFD014: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
-10:013  0:000    (Xsdt: 6FFB0188, Rsdt: 6FFB00C4)
-10:013  0:000    6FFB0188: 'XSDT', 'KBL-ULT', Rev: 1, Len: 292
-10:013  0:000    6FFB00C4: 'RSDT', 'KBL-ULT', Rev: 1, Len: 164
-10:013  0:000    Tables in Xsdt: 32
-10:013  0:000    0. 6FFDD000: 'FACP', 'KBL-ULT', Rev: 5, Len: 268
-10:013  0:000        (Dsdt: 6FFB4000, Facs: 6FF56000, XDsdt: 6FFB4000, XFacs: 0)
-10:013  0:000        6FFB4000: 'DSDT', 'KBL-ULT', Rev: 2, Len: 153034
-10:017  0:004        6FF56000: 'FACS', Ver: 2, Len: 64
-10:017  0:000    1. 6FFFC000: 'UEFI', 'KBL-ULT', Rev: 1, Len: 566
-10:017  0:000    2. 6FFFB000: 'UEFI', 'KBL-ULT', Rev: 1, Len: 66
-10:017  0:000    3. 6FFFA000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 2525
-10:017  0:000    4. 6FFF9000: 'MSDM', 'KBL-ULT', Rev: 3, Len: 85
-10:017  0:000    5. 6FFF8000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1280
-10:017  0:000    6. 6FFF7000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 70
-10:017  0:000    7. 6FFF6000: 'TPM2', 'KBL-ULT', Rev: 3, Len: 52
-10:017  0:000    8. 6FFF2000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 12587
-10:017  0:000    9. 6FFEB000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 28605
-10:017  0:000    10. 6FFE1000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 38482
-10:017  0:000    11. 6FFE0000: 'ASF!', 'KBL-ULT', Rev: 32, Len: 165
-10:017  0:000    12. 6FFDF000: 'ASPT', 'KBL-ULT', Rev: 7, Len: 52
-10:017  0:000    13. 6FFDE000: 'BOOT', 'KBL-ULT', Rev: 1, Len: 40
-10:017  0:000    14. 6FFDC000: 'HPET', 'KBL-ULT', Rev: 1, Len: 56
-10:017  0:000    15. 6FFDB000: 'APIC', 'KBL-ULT', Rev: 3, Len: 300
-10:017  0:000    16. 6FFDA000: 'MCFG', 'KBL-ULT', Rev: 1, Len: 60
-10:017  0:000    17. 6FFB3000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1303
-10:017  0:000    18. 6FFB2000: 'LPIT', 'KBL-ULT', Rev: 1, Len: 148
-10:017  0:000    19. 6FFB1000: 'WSMT', 'KBL-ULT', Rev: 1, Len: 40
-10:017  0:000    20. 6FFAF000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 671
-10:017  0:000    21. 6FFAE000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 838
-10:017  0:000    22. 6FFAA000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 12290
-10:017  0:000    23. 6FFA9000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1310
-10:017  0:000    24. 6FFA8000: 'DBGP', 'KBL-ULT', Rev: 1, Len: 52
-10:017  0:000    25. 6FFA7000: 'DBG2', 'KBL-ULT', Rev: 0, Len: 84
-10:017  0:000    26. 6FFA5000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 4838
-10:017  0:000    27. 6FFA3000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 6062
-10:017  0:000    28. 6FF9F000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 15359
-10:017  0:000    29. 6FF9E000: 'DMAR', 'KBL-ULT', Rev: 1, Len: 312
-10:017  0:000    30. 6FF9D000: 'FPDT', 'KBL-ULT', Rev: 1, Len: 68
-10:018  0:000    31. 6FF9C000: 'BGRT', 'KBL-ULT', Rev: 1, Len: 56
-10:018  0:000    Tables in Rsdt: 32
-10:018  0:000    0. 6FFDD000: 'FACP', 'KBL-ULT', Rev: 5, Len: 268
-10:018  0:000        (Dsdt: 6FFB4000, Facs: 6FF56000, XDsdt: 6FFB4000, XFacs: 0)
-10:018  0:000        6FFB4000: 'DSDT', 'KBL-ULT', Rev: 2, Len: 153034
-10:022  0:004        6FF56000: 'FACS', Ver: 2, Len: 64
-10:022  0:000    1. 6FFFC000: 'UEFI', 'KBL-ULT', Rev: 1, Len: 566
-10:022  0:000    2. 6FFFB000: 'UEFI', 'KBL-ULT', Rev: 1, Len: 66
-10:022  0:000    3. 6FFFA000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 2525
-10:022  0:000    4. 6FFF9000: 'MSDM', 'KBL-ULT', Rev: 3, Len: 85
-10:022  0:000    5. 6FFF8000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1280
-10:022  0:000    6. 6FFF7000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 70
-10:022  0:000    7. 6FFF6000: 'TPM2', 'KBL-ULT', Rev: 3, Len: 52
-10:022  0:000    8. 6FFF2000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 12587
-10:022  0:000    9. 6FFEB000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 28605
-10:022  0:000    10. 6FFE1000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 38482
-10:022  0:000    11. 6FFE0000: 'ASF!', 'KBL-ULT', Rev: 32, Len: 165
-10:022  0:000    12. 6FFDF000: 'ASPT', 'KBL-ULT', Rev: 7, Len: 52
-10:022  0:000    13. 6FFDE000: 'BOOT', 'KBL-ULT', Rev: 1, Len: 40
-10:022  0:000    14. 6FFDC000: 'HPET', 'KBL-ULT', Rev: 1, Len: 56
-10:022  0:000    15. 6FFDB000: 'APIC', 'KBL-ULT', Rev: 3, Len: 300
-10:022  0:000    16. 6FFDA000: 'MCFG', 'KBL-ULT', Rev: 1, Len: 60
-10:022  0:000    17. 6FFB3000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1303
-10:022  0:000    18. 6FFB2000: 'LPIT', 'KBL-ULT', Rev: 1, Len: 148
-10:022  0:000    19. 6FFB1000: 'WSMT', 'KBL-ULT', Rev: 1, Len: 40
-10:022  0:000    20. 6FFAF000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 671
-10:022  0:000    21. 6FFAE000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 838
-10:022  0:000    22. 6FFAA000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 12290
-10:022  0:000    23. 6FFA9000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1310
-10:022  0:000    24. 6FFA8000: 'DBGP', 'KBL-ULT', Rev: 1, Len: 52
-10:022  0:000    25. 6FFA7000: 'DBG2', 'KBL-ULT', Rev: 0, Len: 84
-10:022  0:000    26. 6FFA5000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 4838
-10:022  0:000    27. 6FFA3000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 6062
-10:022  0:000    28. 6FF9F000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 15359
-10:022  0:000    29. 6FF9E000: 'DMAR', 'KBL-ULT', Rev: 1, Len: 312
-10:022  0:000    30. 6FF9D000: 'FPDT', 'KBL-ULT', Rev: 1, Len: 68
-10:022  0:000    31. 6FF9C000: 'BGRT', 'KBL-ULT', Rev: 1, Len: 56
+18:062  13:560  Found UEFI Acpi 2.0 RSDP at 6FFFD014
+18:062  0:000  Saving ACPI tables from RSDP 6FFFD014 to EFI\CLOVER\ACPI\origin ...
+18:062  0:000   6FFFD014: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+18:076  0:013    (Xsdt: 6FFB0188, Rsdt: 6FFB00C4)
+18:076  0:000    6FFB0188: 'XSDT', 'KBL-ULT', Rev: 1, Len: 292 -> XSDT.aml
+18:083  0:007    6FFB00C4: 'RSDT', 'KBL-ULT', Rev: 1, Len: 164 -> RSDT.aml
+18:090  0:006    Tables in Xsdt: 32
+18:090  0:000    0. 6FFDD000: 'FACP', 'KBL-ULT', Rev: 5, Len: 268 -> FACP.aml
+18:096  0:006        (Dsdt: 6FFB4000, Facs: 6FF56000, XDsdt: 6FFB4000, XFacs: 0)
+18:096  0:000        6FFB4000: 'DSDT', 'KBL-ULT', Rev: 2, Len: 153034 -> DSDT.aml
+18:110  0:013        6FF56000: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+18:117  0:006    1. 6FFFC000: 'UEFI', 'KBL-ULT', Rev: 1, Len: 566 -> UEFI.aml
+18:124  0:007    2. 6FFFB000: 'UEFI', 'KBL-ULT', Rev: 1, Len: 66 -> UEFI.aml
+18:132  0:008    3. 6FFFA000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 2525 -> SSDT-0-KBL-ULT.aml
+18:140  0:008    4. 6FFF9000: 'MSDM', 'KBL-ULT', Rev: 3, Len: 85 -> MSDM.aml
+18:149  0:008    5. 6FFF8000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1280 -> SSDT-1-KBL-ULT.aml
+18:156  0:007    6. 6FFF7000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 70 -> SSDT-2-KBL-ULT.aml
+18:162  0:006    7. 6FFF6000: 'TPM2', 'KBL-ULT', Rev: 3, Len: 52 -> TPM2.aml
+18:170  0:008    8. 6FFF2000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 12587 -> SSDT-3-KBL-ULT.aml
+18:177  0:007    9. 6FFEB000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 28605 -> SSDT-4-KBL-ULT.aml
+18:185  0:007    10. 6FFE1000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 38482 -> SSDT-5-KBL-ULT.aml
+18:194  0:009    11. 6FFE0000: 'ASF!', 'KBL-ULT', Rev: 32, Len: 165 -> ASF!.aml
+18:201  0:006    12. 6FFDF000: 'ASPT', 'KBL-ULT', Rev: 7, Len: 52 -> ASPT.aml
+18:209  0:008    13. 6FFDE000: 'BOOT', 'KBL-ULT', Rev: 1, Len: 40 -> BOOT.aml
+18:215  0:006    14. 6FFDC000: 'HPET', 'KBL-ULT', Rev: 1, Len: 56 -> HPET.aml
+18:224  0:008    15. 6FFDB000: 'APIC', 'KBL-ULT', Rev: 3, Len: 300 -> APIC.aml
+18:230  0:006    16. 6FFDA000: 'MCFG', 'KBL-ULT', Rev: 1, Len: 60 -> MCFG.aml
+18:238  0:007    17. 6FFB3000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1303 -> SSDT-6-KBL-ULT.aml
+18:246  0:007    18. 6FFB2000: 'LPIT', 'KBL-ULT', Rev: 1, Len: 148 -> LPIT.aml
+18:254  0:008    19. 6FFB1000: 'WSMT', 'KBL-ULT', Rev: 1, Len: 40 -> WSMT.aml
+18:260  0:006    20. 6FFAF000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 671 -> SSDT-7-KBL-ULT.aml
+18:267  0:006    21. 6FFAE000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 838 -> SSDT-8-KBL-ULT.aml
+18:275  0:008    22. 6FFAA000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 12290 -> SSDT-9-KBL-ULT.aml
+18:283  0:007    23. 6FFA9000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1310 -> SSDT-10-KBL-ULT.aml
+18:289  0:006    24. 6FFA8000: 'DBGP', 'KBL-ULT', Rev: 1, Len: 52 -> DBGP.aml
+18:296  0:006    25. 6FFA7000: 'DBG2', 'KBL-ULT', Rev: 0, Len: 84 -> DBG2.aml
+18:303  0:006    26. 6FFA5000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 4838 -> SSDT-11-KBL-ULT.aml
+18:311  0:007    27. 6FFA3000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 6062 -> SSDT-12-KBL-ULT.aml (Found hidden SSDT 7 pcs)
+18:318  0:007        * 6F752018: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1485  53 53 44 54 CD 05 00 00 02 BB 50 6D 52 65 66 00 Internal length = 1485 -> SSDT-x12_0-Cpu0Ist.aml
+18:325  0:007        * 6F750018: 'SSDT', 'ApIst', Rev: 2, Len: 3348  53 53 44 54 14 0D 00 00 02 2A 50 6D 52 65 66 00 Internal length = 3348 -> SSDT-x12_1-ApIst.aml
+18:332  0:007        * 6F751898: 'SSDT', 'Cpu0Cst', Rev: 2, Len: 1023  53 53 44 54 FF 03 00 00 02 11 50 6D 52 65 66 00 Internal length = 1023 -> SSDT-x12_2-Cpu0Cst.aml
+18:338  0:005        * 6F752898: 'SSDT', 'ApCst', Rev: 2, Len: 778  53 53 44 54 0A 03 00 00 02 93 50 6D 52 65 66 00 Internal length = 778 -> SSDT-x12_3-ApCst.aml
+18:346  0:008        * 6F752DD8: 'SSDT', 'Cpu0Hwp', Rev: 2, Len: 186  53 53 44 54 BA 00 00 00 02 7D 50 6D 52 65 66 00 Internal length = 186 -> SSDT-x12_4-Cpu0Hwp.aml
+18:355  0:008        * 6F74F018: 'SSDT', 'ApHwp', Rev: 2, Len: 791  53 53 44 54 17 03 00 00 02 80 50 6D 52 65 66 00 Internal length = 791 -> SSDT-x12_5-ApHwp.aml
+18:363  0:008        * 6F751018: 'SSDT', 'HwpLvt', Rev: 2, Len: 1576  53 53 44 54 28 06 00 00 02 85 50 6D 52 65 66 00 Internal length = 1576 -> SSDT-x12_6-HwpLvt.aml
+18:370  0:007  
+18:370  0:000    28. 6FF9F000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 15359 -> SSDT-13-KBL-ULT.aml
+18:379  0:008    29. 6FF9E000: 'DMAR', 'KBL-ULT', Rev: 1, Len: 312 -> DMAR.aml
+18:386  0:007    30. 6FF9D000: 'FPDT', 'KBL-ULT', Rev: 1, Len: 68 -> FPDT.aml
+18:393  0:006    31. 6FF9C000: 'BGRT', 'KBL-ULT', Rev: 1, Len: 56 -> BGRT.aml
+18:400  0:007    Tables in Rsdt: 32
+18:400  0:000    0. 6FFDD000: 'FACP', 'KBL-ULT', Rev: 5, Len: 268
+18:400  0:000        (Dsdt: 6FFB4000, Facs: 6FF56000, XDsdt: 6FFB4000, XFacs: 0)
+18:400  0:000        6FFB4000: 'DSDT', 'KBL-ULT', Rev: 2, Len: 153034
+18:402  0:002        6FF56000: 'FACS', Ver: 2, Len: 64
+18:402  0:000    1. 6FFFC000: 'UEFI', 'KBL-ULT', Rev: 1, Len: 566
+18:402  0:000    2. 6FFFB000: 'UEFI', 'KBL-ULT', Rev: 1, Len: 66
+18:402  0:000    3. 6FFFA000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 2525
+18:402  0:000    4. 6FFF9000: 'MSDM', 'KBL-ULT', Rev: 3, Len: 85
+18:402  0:000    5. 6FFF8000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1280
+18:402  0:000    6. 6FFF7000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 70
+18:402  0:000    7. 6FFF6000: 'TPM2', 'KBL-ULT', Rev: 3, Len: 52
+18:402  0:000    8. 6FFF2000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 12587
+18:402  0:000    9. 6FFEB000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 28605
+18:402  0:000    10. 6FFE1000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 38482
+18:402  0:000    11. 6FFE0000: 'ASF!', 'KBL-ULT', Rev: 32, Len: 165
+18:402  0:000    12. 6FFDF000: 'ASPT', 'KBL-ULT', Rev: 7, Len: 52
+18:402  0:000    13. 6FFDE000: 'BOOT', 'KBL-ULT', Rev: 1, Len: 40
+18:402  0:000    14. 6FFDC000: 'HPET', 'KBL-ULT', Rev: 1, Len: 56
+18:402  0:000    15. 6FFDB000: 'APIC', 'KBL-ULT', Rev: 3, Len: 300
+18:402  0:000    16. 6FFDA000: 'MCFG', 'KBL-ULT', Rev: 1, Len: 60
+18:402  0:000    17. 6FFB3000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1303
+18:402  0:000    18. 6FFB2000: 'LPIT', 'KBL-ULT', Rev: 1, Len: 148
+18:402  0:000    19. 6FFB1000: 'WSMT', 'KBL-ULT', Rev: 1, Len: 40
+18:402  0:000    20. 6FFAF000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 671
+18:402  0:000    21. 6FFAE000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 838
+18:402  0:000    22. 6FFAA000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 12290
+18:402  0:000    23. 6FFA9000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 1310
+18:402  0:000    24. 6FFA8000: 'DBGP', 'KBL-ULT', Rev: 1, Len: 52
+18:402  0:000    25. 6FFA7000: 'DBG2', 'KBL-ULT', Rev: 0, Len: 84
+18:402  0:000    26. 6FFA5000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 4838
+18:402  0:000    27. 6FFA3000: 'SSDT', 'KBL-ULT', Rev: 2, Len: 6062
+18:402  0:000    28. 6FF9F000: 'SSDT', 'KBL-ULT', Rev: 1, Len: 15359
+18:402  0:000    29. 6FF9E000: 'DMAR', 'KBL-ULT', Rev: 1, Len: 312
+18:402  0:000    30. 6FF9D000: 'FPDT', 'KBL-ULT', Rev: 1, Len: 68
+18:402  0:000    31. 6FF9C000: 'BGRT', 'KBL-ULT', Rev: 1, Len: 56

@@ -29,6 +29,36 @@
 			<array>
 				<dict>
 					<key>Comment</key>
+					<string>change EHC2 to EH02</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUhDMg==</data>
+					<key>Replace</key>
+					<data>RUgwMg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change EHC1 to EH01</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUhDMQ==</data>
+					<key>Replace</key>
+					<data>RUgwMQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change XHCI to XHC</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>WEhDSQ==</data>
+					<key>Replace</key>
+					<data>WEhDXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change OSID to XSID (to avoid match against _OSI XOSI patch)</string>
 					<key>Disabled</key>
 					<true/>
@@ -181,6 +211,11 @@
 		<key>flagstate</key>
 		<integer>1</integer>
 	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>HWPEnable</key>
+		<true/>
+	</dict>
 	<key>Comment</key>
 	<string>This file is for 10.14.x with native CoffeeLake support</string>
 	<key>Devices</key>
@@ -323,8 +358,8 @@
 			<dict>
 				<key>#PinConfigurations</key>
 				<data></data>
-				<key>#layout-id</key>
-				<integer>3</integer>
+				<key>layout-id</key>
+				<integer>99</integer>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -390,21 +425,23 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>#EDID</key>
+		<key>EDID</key>
 		<dict>
 			<key>Inject</key>
 			<false/>
+			<key>#Custom</key>
+			<data>AP///////wAoiSpCAAAAAAAbAQSlHRR4A95Qo1RMmSYPUFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgMJcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkgICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgADk=</data>
 		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<true/>
+			<false/>
 			<key>NVidia</key>
-			<true/>
+			<false/>
 		</dict>
-		<key>ig-platform-id</key>
+		<key>#ig-platform-id</key>
 		<string>0x3e9b0006</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
@@ -474,11 +511,11 @@
 				<key>Comment</key>
 				<string>CFL patch for MateBooks (wtf is this shit)</string>
 				<key>Find</key>
-				<data>SP8FpUYHAIuWwCUAAIqO</data>
+				<data>SP8FpUYHAIuWwCUAAIqOlQ==</data>
 				<key>Name</key>
 				<string>AppleIntelCFLGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>uAQAAACJhrwlAAAxwF3D</data>
+				<data>uAQAAACJhrwlAAAxwF3DlQ==</data>
 				<key>Disabled</key>
 				<false/>
 			</dict>
@@ -527,6 +564,8 @@
 		<string>MacBookPro15,2</string>
 		<key>Trust</key>
 		<true/>
+		<key>Version</key>
+		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>

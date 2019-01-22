@@ -165,7 +165,15 @@ public:
 	 *  @return true on success
 	 */
 	EXPORT static bool compatibleKernel(uint32_t min, uint32_t max);
-	
+
+	/**
+	 *  Erase coverage instruction prefix (like inc qword ptr[]), that causes function routing to fail
+	 *
+	 *  @param addr   address to valid instruction code
+	 *  @param count  amount of instructions to inspect
+	 */
+	EXPORT void eraseCoverageInstPrefix(mach_vm_address_t addr, size_t count=5);
+
 	/**
 	 *  Solve a kinfo symbol
 	 *
@@ -283,7 +291,7 @@ public:
 	 *
 	 *  @param patch              patch to apply
 	 *  @param startingAddress    start with this address (or kext/kernel lowest address)
-	 *  @param maxSize            maximum size to look for (or kext/kernel max size)
+	 *  @param maxSize            maximum size to lookup (or kext/kernel max size)
 	 */
 	EXPORT void applyLookupPatch(const LookupPatch *patch, uint8_t *startingAddress, size_t maxSize);
 #endif /* LILU_KEXTPATCH_SUPPORT */

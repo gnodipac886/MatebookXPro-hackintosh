@@ -313,22 +313,27 @@ private:
 	 *  Kernel patcher instance
 	 */
 	KernelPatcher *patcher {nullptr};
-	
+
 	/**
-	 *  Patch requested for path
+	 *  Pending callback entry
 	 */
-	char pendingPath[MAXPATHLEN] {};
-	
+	struct PendingUser {
+		/**
+		 *  Patch requested for path
+		 */
+		char path[MAXPATHLEN] {};
+
+		/**
+		 *  Patch requested for path
+		 */
+		uint32_t pathLen {0};
+	};
+
 	/**
-	 *  Patch requested for path
+	 *  Stored pending callback
 	 */
-	uint32_t pendingPathLen {0};
-	
-	/**
-	 *  Patch requested
-	 */
-	bool pendingPatchCallback {false};
-	
+	ThreadLocal<PendingUser *, 8> pending;
+
 	/**
 	 *  Current minimal proc name length
 	 */
@@ -478,12 +483,10 @@ private:
 	 *  @param action     passed action, we only need KAUTH_FILEOP_EXEC
 	 *  @param arg0       pointer to vnode (vnode *) for executable
 	 *  @param arg1       pointer to path (char *) to executable
-	 *  @param arg2       unused
-	 *  @param arg3       unsed
 	 *
 	 *  @return 0 to allow further execution
 	 */
-	static int execListener(kauth_cred_t credential, void *idata, kauth_action_t action, uintptr_t arg0, uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+	static int execListener(kauth_cred_t /* credential */, void *idata, kauth_action_t action, uintptr_t /* arg0 */, uintptr_t arg1, uintptr_t, uintptr_t);
 
 	/**
 	 *  Unrestricted vm_protect, that takes care of Mojave codesign limitations for everyone's good.
