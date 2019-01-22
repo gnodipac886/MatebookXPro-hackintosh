@@ -123,3 +123,14 @@ QR Codes:
 | ![PayPal_160]( https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true) | ![venmo_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true) | ![Wechat_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/WeChat.jpg) |
 
 Good Luck!
+
+### Updates
+
+## 1/21
+# - Updated kexts
+- New Whatevergreen replaced old custom version
+- Lilu updated
+- New Applealc to support native audio codec
+- Custom version of I2C trackpad kexts for better support
+- Added KBL and SKL config.plists for people who are interested to help out. Main issue: Blackscreen/ internal screen not recognized
+- config.plist minor fixes
