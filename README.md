@@ -124,9 +124,9 @@ QR Codes:
 
 Good Luck!
 
-## Updates
+# Updates
 
-## 1/21
+### 1/21
 - New Whatevergreen replaced old custom version
 - Lilu updated
 - New Applealc to support native audio codec
