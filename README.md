@@ -133,3 +133,26 @@ Good Luck!
 - Custom version of I2C trackpad kexts for better support
 - Added KBL and SKL config.plists for people who are interested to help out. Main issue: Blackscreen/ internal screen not recognized
 - config.plist minor fixes
+
+### 1/23/2019 : 10.14.3 Update
+- New 10.14.3 graphics patch
+```
+Comment: CFL patch for MateBook X Pro
+Name: AppleIntelCFLGraphicsFramebuffer
+Find: <48ff0589 4d07008b 96c02500 008a8e95>
+Replace: <b8040000 008986bc 25000031 c05dc395>
+```
+```
+			<dict>
+				<key>Comment</key>
+				<string>CFL patch for MateBook X Pro</string>
+				<key>Find</key>
+				<data>SP8FiU0HAIuWwCUAAIqOlQ==</data>
+				<key>Name</key>
+				<string>AppleIntelCFLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>uAQAAACJhrwlAAAxwF3DlQ==</data>
+				<key>Disabled</key>
+				<false/>
+			</dict>
+```
