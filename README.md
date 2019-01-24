@@ -92,7 +92,21 @@ Clone the repository via terminal or download it and swap the CLOVER folder down
 - delete the DSDT.aml file in /Volumes/EFI/EFI/CLOVER/ACPI/patched and generate your own via pressing f4 	at the clover bootscreen.
 - For i5 models: you have to make a custom CPUFriendProvider for Power Management by following this 		guide:
 	https://github.com/PMheart/CPUFriend/blob/master/Instructions.md
-
+	
+### DSDT fixes
+Add the following code to your DSDT.aml to fix brightness keys.
+```	
+into method label _Q0A replace_content
+begin
+// Brightness Down\n
+    Notify(\_SB.PCI0.LPCB.PS2K, 0x0405)\n
+end;
+into method label _Q0B replace_content
+begin
+// Brightness Up\n
+    Notify(\_SB.PCI0.LPCB.PS2K, 0x0406)\n
+end;
+```
 Reboot
 
 You should have a half functioning Matebook X Pro Hackintosh by now. 
