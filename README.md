@@ -19,14 +19,13 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 
 ## What works:
 - Intel UHD 620 Graphics Acceleration (we are using a CoffeeLake platform-id for now, will try to 	switch to native Kabylake graphics)
-- Realtek alc256 Audio via VoodooHDA (please help generate a custom AppleHda layout if you want to 	help, right now all existing layouts makes the tweeters work)
-- Keyboard with Volume Controls (via VoodooPS2)
-- HDMI + Thunderbolt 3 (TB3 at least works as a display output, not sure about other functionality)
-- Camera support up to 10.14.0
-- Trackpad and Native Gestures via VoodooI2c (Four fingers support is not well implemented, please 	try using five fingers as a substitution)
+- Realtek alc256 Audio via AppleALC
+- Keyboard with Volume Controls and Brightness controls (via VoodooPS2)
+- Camera support up to 10.14.3
+- Trackpad and Native Gestures via Custom VoodooI2C
 - Touchscreen with multi-touch capabilities (think of it as a large trackpad)
-- Battery Percentage (via ACPIBatteryManager)
-- Bluetooth (Not stable, further examination is required)
+- Battery Percentage
+- Bluetooth (Reboot from Widows required)
 - Power Management (via CPUFriend and CPUFriendProvider, CPU idles at 1.2Ghz though Windows idles 	at 0.8Ghz, needs improvement)(kext taken from TheDarkVoid's Dell XPS 9360 guide)
 - Wifi via USB dongle
 
@@ -73,7 +72,7 @@ http://bradshacks.com/matebook-x-pro-fingerprint/
 Install macOS according to post 2 of the guide:
 https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
 
-Post Installation
+## Post Installation
 
 You should now be at your desktop.
 
