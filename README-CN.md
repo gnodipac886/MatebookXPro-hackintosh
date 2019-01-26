@@ -61,7 +61,7 @@ https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-w
 
 ***为了做引导，把 config.plist/Graphics/ig-platform-id 设为 0x12345678.***
 
-要是你重装了windows的话，指纹可能不好用了，得重装驱动:
+要是您重装了windows的话，指纹可能不好用了，得重装驱动:
 http://bradshacks.com/matebook-x-pro-fingerprint/
 
 按照第二张帖子装mac系统:
@@ -69,7 +69,7 @@ https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-w
 
 ## 安装后：
 
-你现在应该在桌面。
+您现在应该在桌面。
 
 下载：
 - Clover Configurator Pro
@@ -81,8 +81,8 @@ https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-w
 加载EFI
 
 下载我的github上的文件
-***您要是有中国产的华为你几本的话***, 您应该:
-- 删除 DSDT.aml 文件 ： /Volumes/EFI/EFI/CLOVER/ACPI/patched 生成你自己的dsdt.
+***您要是有中国产的华为笔记本的话***, 您应该:
+- 删除 DSDT.aml 文件 ： /Volumes/EFI/EFI/CLOVER/ACPI/patched 生成您自己的dsdt.
 - i5的用户，请自己生成能源管理的kext。
 	https://github.com/PMheart/CPUFriend/blob/master/Instructions.md
 	
@@ -102,9 +102,10 @@ end;
 ```
 重启
 
-你现在该有个能用的黑苹果. 
+恭喜，您现在该有个能用的黑苹果. 
 
-常见为题:
+
+### 常见为题:
 - 亮度调节不了: 下载 “brightness slider”
 	https://itunes.apple.com/us/app/brightness-slider/id456624497?mt=12
 - 睡眠用不了
