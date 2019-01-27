@@ -158,7 +158,7 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 	
 QR Codes:
 
-| PayPal                                                     | Venmo.                                                     | WeChat                                               |
+| PayPal                                                     | Venmo.                                                     | 微信                                               |
 | ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
 | ![PayPal_160]( https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true) | ![venmo_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true) | ![Wechat_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/WeChat.jpg) |
 
