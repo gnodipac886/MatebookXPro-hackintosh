@@ -14,7 +14,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - 16GB RAM
 - Nvidia GTX MX 150 / Intel UHD 620
 - 3K display @ 3000x2000
-- 512 Gb Toshiba SSD (Not tested on Liteon SSDs yet)
+- 512 Gb Toshiba SSD
 - USB Wifi: Edimax N150
 
 ## What works:
@@ -28,6 +28,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - Bluetooth (Reboot from Widows required)
 - Power Management (via CPUFriend and CPUFriendProvider, CPU idles at 1.2Ghz though Windows idles 	at 0.8Ghz, needs improvement)(kext taken from TheDarkVoid's Dell XPS 9360 guide)
 - Wifi via USB dongle
+- Liton SSD are now supported.
 
 ## What doesn't Work:
 - Brightness and Sleep (Likely due to spoofing Coffeelake Graphics)
