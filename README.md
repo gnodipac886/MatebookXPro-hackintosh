@@ -28,7 +28,8 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - Bluetooth (Reboot from Widows required)
 - Power Management (via CPUFriend and CPUFriendProvider, CPU idles at 1.2Ghz though Windows idles 	at 0.8Ghz, needs improvement)(kext taken from TheDarkVoid's Dell XPS 9360 guide)
 - Wifi via USB dongle
-- Liton SSD are now supported.
+- Liton SSDs are now supported.
+- HDMI 2.0 support, up to theoretically 4K @60Hz. (Only 4K @30 tested due to equipment limitations)
 
 ## What doesn't Work:
 - Brightness and Sleep (Likely due to spoofing Coffeelake Graphics)
