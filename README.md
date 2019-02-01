@@ -117,27 +117,6 @@ Known Problems and Partial Solutions:
 - Sleep doesn't work: after waking from a sleep (closing the lid), your computer will wake and you will 	see a graphics glitch. This should be due to Coffeelake spoofing. We are trying to fix this. 
 - Bluetooth: you will need a copy of 10.13.6's IOBluetoothFamily.kext and install it to S/L/E via 		kextbeast.
 
-### Credits:
-- Darren_Pan on reddit
-- midi and Maemo on discord
-- Chinese Matebook X Pro Hackintosh community
-- Spanish Matebook X Pro Hackintosh community
-- All the developers who developed the kexts used in this guide.
-
-### Help a broke student out:
-- PayPal:
-	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
-- Venmo:
-	https://venmo.com/code?user_id=2386577070227456090
-	
-QR Codes:
-
-| PayPal                                                     | Venmo.                                                     | WeChat                                               |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
-| ![PayPal_160]( https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true) | ![venmo_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true) | ![Wechat_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/WeChat.jpg) |
-
-Good Luck!
-
 # Updates
 
 ### 1/21/2019
@@ -148,7 +127,7 @@ Good Luck!
 - Added KBL and SKL config.plists for people who are interested to help out. Main issue: Blackscreen/ internal screen not recognized
 - config.plist minor fixes
 
-### 1/23/2019 : 10.14.3 Update
+### 1/23/2019 : 10.14.3 Update Graphics
 - New 10.14.3 graphics patch
 ```
 Comment: CFL patch for MateBook X Pro
@@ -170,3 +149,35 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 				<false/>
 			</dict>
 ```
+### 2/1/2019 : 10.14.3 
+- New Virtural SMC replacing FakeSMC
+- Added support for 4K video output with HDMI audio support
+- Added tools.zip for editing system files such as config.plist or DSDT
+- Support for firevault2 (In theory, never tested)
+- Added vanilla 10.14.3 framebuffer graphics kext, if you have replaced the kext before with a custom version, please swap it out in /System/Library/Extension and then use kextutility in tools.zip to rebuild permissions then reboot with 10.14.3 config.plist.
+- Added "Configs" for past config.plists and plists for KBL or SKL graphics (NEED HELP)
+- Other tweaks to CLOVER folder to support VituralSMC kext.
+- Updated NoTouchID.kext to newest versions for Mojave support which elimates any lags when promted for user password
+- Remember to apply brightness key patches to you DSDT.aml so you can play with them for no reason
+- New config.plist in CLOVER comes with 10.14.3 graphics patch in kexttopatch (credit gnodipac886)
+
+# Credits:
+- Darren_Pan on reddit
+- midi and Maemo on discord
+- Chinese Matebook X Pro Hackintosh community
+- Spanish Matebook X Pro Hackintosh community
+- All the developers who developed the kexts used in this guide.
+
+# Help a broke student out:
+- PayPal:
+	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
+- Venmo:
+	https://venmo.com/code?user_id=2386577070227456090
+	
+QR Codes:
+
+| PayPal                                                     | Venmo.                                                     | WeChat                                               |
+| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
+| ![PayPal_160]( https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true) | ![venmo_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true) | ![Wechat_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/WeChat.jpg) |
+
+Good Luck!
