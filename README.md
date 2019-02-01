@@ -160,6 +160,7 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 - Updated NoTouchID.kext to newest versions for Mojave support which elimates any lags when promted for user password
 - Remember to apply brightness key patches to you DSDT.aml so you can play with them for no reason
 - New config.plist in CLOVER comes with 10.14.3 graphics patch in kexttopatch (credit gnodipac886)
+- Reports of Thunderbolt eGPU was able to work when booted with eGPU plugged in, no hotplug support yet
 
 # Credits:
 - Darren_Pan on reddit
