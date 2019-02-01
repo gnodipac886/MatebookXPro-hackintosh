@@ -192,7 +192,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -disablegfxfirmware -cdfon -igfxnohdmi -wegnoegpu</string>
+		<string>dart=0 -disablegfxfirmware -cdfon -igfxnohdmi -wegnoegpu lilucpu=10</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -293,9 +293,9 @@
 				<integer>1</integer>
 				<key>#3 no external</key>
 				<string>0x3e9b0000, eliminate all external ports (0105 and 0204)</string>
-				<key>#AAPL00,override-no-connect</key>
+				<key>AAPL00,override-no-connect</key>
 				<data></data>
-				<key>#AAPL00,override-no-edid</key>
+				<key>AAPL00,override-no-edid</key>
 				<data></data>
 				<key>#framebuffer-con0-enable</key>
 				<integer>1</integer>
@@ -428,9 +428,9 @@
 		<key>EDID</key>
 		<dict>
 			<key>Inject</key>
-			<false/>
-			<key>#Custom</key>
-			<data>AP///////wAoiSpCAAAAAAAbAQSlHRR4A95Qo1RMmSYPUFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgMJcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkgICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgADk=</data>
+			<true/>
+			<key>Custom</key>
+			<data>AP///////wAoiSpCAAAAAAAbAQS1HRR4A95Qo1RMmSYPUFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgMJcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkgICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgACk=</data>
 		</dict>
 		<key>Inject</key>
 		<dict>
@@ -493,25 +493,17 @@
 		</array>
 		<key>KextsToPatch</key>
 		<array>
-      <dict>
-				<key>Comment</key>
-				<string>IONVMeFamily: Ignore FLBAS bit:4 being set - for Plextor/LiteOn/Hynix (credit Pene)</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IONVMeFamily</string>
-				<key>Find</key>
-				<data>ikga9sEQ</data>
-				<key>Replace</key>
-				<data>ikga9sEA</data>
-			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>USB Port limit patch 10.14</string>
+				<string>USB 10.14 by PMHeart,FredWst</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>g/sPD4MDBQAA</data>
 				<key>InfoPlistPatch</key>
 				<false/>
+				<key>MatchOS</key>
+				<string>10.14</string>
 				<key>Name</key>
 				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>
@@ -519,9 +511,9 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>CFL patch for MateBooks (wtf is this shit)</string>
+				<string>CFL patch for MateBook X Pro (10.14.3 credit gnodipac886)</string>
 				<key>Find</key>
-				<data>SP8FpUYHAIuWwCUAAIqOlQ==</data>
+				<data>SP8FiU0HAIuWwCUAAIqOlQ==</data>
 				<key>Name</key>
 				<string>AppleIntelCFLGraphicsFramebuffer</string>
 				<key>Replace</key>
@@ -574,8 +566,6 @@
 		<string>MacBookPro15,2</string>
 		<key>Trust</key>
 		<true/>
-		<key>Version</key>
-		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
