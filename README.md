@@ -162,6 +162,7 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 - Remember to apply brightness key patches to you DSDT.aml so you can play with them for no reason
 - New config.plist in CLOVER comes with 10.14.3 graphics patch in kexttopatch (credit gnodipac886)
 - Reports of Thunderbolt eGPU was able to work when booted with eGPU plugged in, no hotplug support yet
+- Support for Liteon SSDs confirmed with new config.plist in CLOVER and in Configs folder
 
 # Credits:
 - Darren_Pan on reddit
