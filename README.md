@@ -26,7 +26,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - Touchscreen with multi-touch capabilities (think of it as a large trackpad)
 - Battery Percentage
 - Bluetooth (Reboot from Widows required)
-- Power Management (via CPUFriend and CPUFriendProvider, CPU idles at 1.2Ghz though Windows idles 	at 0.8Ghz, needs improvement)(kext taken from TheDarkVoid's Dell XPS 9360 guide)
+- Power Management (via CPUFriend and CPUFriendProvider, CPU idles at 1.2Ghz though Windows idles at 0.8GHz)
 - Wifi via USB dongle
 - Liton SSDs are now supported.
 - HDMI 2.0 support, up to theoretically 4K @60Hz. (Only 4K @30 tested due to equipment limitations)
@@ -41,7 +41,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 ## Let's Get Started
 
 ### What you need:
-- Huawei Matebook X Pro (either i7 or i5 model, though i5 model has not been tested)
+- Huawei Matebook X Pro (either i7 or i5 model)
 - macOS or OS X downloaded from the Mac App Store
 - 8GB USB stick
 - External USB Wifi Dongle
@@ -116,7 +116,6 @@ Known Problems and Partial Solutions:
 - Brightness not working: download brightness slider from the App Store, it doesn't change the actual 		brightness, but it pleases the eye since it changes the white spot level or something along 		those lines.
 	https://itunes.apple.com/us/app/brightness-slider/id456624497?mt=12
 - Sleep doesn't work: after waking from a sleep (closing the lid), your computer will wake and you will 	see a graphics glitch. This should be due to Coffeelake spoofing. We are trying to fix this. 
-- Bluetooth: you will need a copy of 10.13.6's IOBluetoothFamily.kext and install it to S/L/E via 		kextbeast.
 
 # Updates
 
