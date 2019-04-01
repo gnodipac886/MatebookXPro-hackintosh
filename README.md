@@ -58,32 +58,26 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 ## Pre-Install:
 Prior to installing macOS, it is a good idea to backup any important files on Windows.
 
-You can also leave Windows intact, but it can get tricky. Read here for more information: 
-http://www.tonymacx86.com/multi-booting/133940-mavericks-windows-8-same-drive-without-erasing.html
+- You can also leave Windows intact, but it can get tricky. Read [here](http://www.tonymacx86.com/multi-booting/133940-mavericks-windows-8-same-drive-without-erasing.html) for more information: 
 
-This guide for creating USB and installing using Clover UEFI works well for this laptop: 
-https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
+- [This](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) guide for creating USB and installing using Clover UEFI works well for this laptop: 
 
-For the installation purposes, please use the HD620 plist that rehabman provides in his guide for your installation USB.
+- For the installation purposes, please use the HD620 plist that rehabman provides in his guide for your installation USB.
 
 ***Set config.plist/Graphics/ig-platform-id=0x12345678 for installation.***
 
-I ended up wiping windows and installing it afterwards, if you do so, fingerprint sensor will stop working, please follow the guide from this link:
-http://bradshacks.com/matebook-x-pro-fingerprint/
+I ended up wiping windows and installing it afterwards, if you do so, fingerprint sensor will stop working, please follow the guide from [this](http://bradshacks.com/matebook-x-pro-fingerprint/) link:
 
-Install macOS according to post 2 of the guide:
-https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
+Install macOS according to post 2 of [this](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) guide.
 
 ## Post Installation
 
 You should now be at your desktop.
 
 Download
-- Clover Configurator Pro
-	https://github.com/Micky1979/Clover-Configurator-Pro/blob/master/Updates/CCP_v1.4.1.zip?raw=true
+- [Clover Configurator Pro](https://github.com/Micky1979/Clover-Configurator-Pro/blob/master/Updates/CCP_v1.4.1.zip?raw=true)
 - USB Wi-fi Drivers
-- Newest Clover Bootloader, and install it to your boot disk
-	https://sourceforge.net/projects/cloverefiboot/
+- Newest [Clover Bootloader](https://sourceforge.net/projects/cloverefiboot/), and install it to your boot disk
 
 Mount EFI partition if not mounted already
 
@@ -91,8 +85,7 @@ Clone the repository via terminal or download it and swap the CLOVER folder down
 
 ***Note if you have the i5 version, or any other configurations of the laptop sold exclusively in China***, you should:
 - delete the DSDT.aml file in /Volumes/EFI/EFI/CLOVER/ACPI/patched and generate your own via pressing f4 	at the clover bootscreen.
-- For i5 models: you have to make a custom CPUFriendProvider for Power Management by following this 		guide:
-	https://github.com/PMheart/CPUFriend/blob/master/Instructions.md
+- For i5 models: you have to make a custom CPUFriendProvider for Power Management by following [this](https://github.com/PMheart/CPUFriend/blob/master/Instructions.md) guide:
 	
 ### DSDT fixes
 Add the following code to your DSDT.aml to fix brightness keys.
@@ -113,42 +106,45 @@ Reboot
 You should have a half functioning Matebook X Pro Hackintosh by now. 
 
 Known Problems and Partial Solutions:
-- Brightness not working: download brightness slider from the App Store, it doesn't change the actual 		brightness, but it pleases the eye since it changes the white spot level or something along 		those lines.
-	https://itunes.apple.com/us/app/brightness-slider/id456624497?mt=12
-- Sleep doesn't work: after waking from a sleep (closing the lid), your computer will wake and you will 	see a graphics glitch. This should be due to Coffeelake spoofing. We are trying to fix this. 
+- Brightness not working: download [Brightness Slider](https://itunes.apple.com/us/app/brightness-slider/id456624497?mt=12) from the App Store, it doesn't change the actual brightness, but it pleases the eye since it changes the white spot level or something along those lines.
+- Sleep doesn't work: after waking from a sleep (closing the lid), your computer will wake and you will see a graphics glitch. This should be due to Coffeelake spoofing. We are trying to fix this. 
 
 # Updates
 
-### 1/21/2019
-- New Whatevergreen replaced old custom version
-- Lilu updated
-- New Applealc to support native audio codec
-- Custom version of I2C trackpad kexts for better support
-- Added KBL and SKL config.plists for people who are interested to help out. Main issue: Blackscreen/ internal screen not recognized
-- config.plist minor fixes
-
-### 1/23/2019 : 10.14.3 Update Graphics
-- New 10.14.3 graphics patch
+### 4/1/2019: 10.14.4 & New Power Management Kexts
+- New CPUFriend and CPUFriendProvider kexts for better battery life. (~9 hrs)
+- Run the following code if you would like to make a custom version of the power management kexts to your liking, then install the kexts located at your desktop to Clover [Source](https://github.com/daliansky/XiaoMi-Pro/tree/master/one-key-cpufriend)
 ```
-Comment: CFL patch for MateBook X Pro
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/daliansky/XiaoMi-Pro/master/one-key-cpufriend/one-key-cpufriend.sh)"
+
+```
+- Undervolt the CPU/GPU/Cache via a shell: Place the new "voltageshift" file into your downloads folder and run the "voltageset.command" script to undervolt, and the "voltageinfo.command" to check your results. Furthermore, you can also set custom values to what you would like to undervolt to based on your hardware (i5 vs i7) by editing the script. [Source](https://github.com/daliansky/XiaoMi-Pro/issues/150) 
+- WhatEverGreen updated to version 1.2.7
+- Lilu updated to version 1.3.5
+- New config.plist in CLOVER comes with 10.14.4 graphics patch in kexttopatch (credit gnodipac886)
+- New 10.14.4 graphics patch
+```
+Comment: CFL patch for MateBook X Pro (10.14.4 credit gnodipac886)
 Name: AppleIntelCFLGraphicsFramebuffer
-Find: <48ff0589 4d07008b 96c02500 008a8e95>
+Find: <48ff0557 f607008b 96c02500 008a8e95>
 Replace: <b8040000 008986bc 25000031 c05dc395>
 ```
 ```
-			<dict>
-				<key>Comment</key>
-				<string>CFL patch for MateBook X Pro</string>
-				<key>Find</key>
-				<data>SP8FiU0HAIuWwCUAAIqOlQ==</data>
-				<key>Name</key>
-				<string>AppleIntelCFLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>uAQAAACJhrwlAAAxwF3DlQ==</data>
-				<key>Disabled</key>
-				<false/>
-			</dict>
+    <dict>
+        <key>Comment</key>
+        <string>CFL patch for MateBook X Pro (10.14.4 credit gnodipac886)</string>
+        <key>Find</key>
+        <data>SP8FV/YHAIuWwCUAAIqOlQ==</data>
+        <key>Name</key>
+        <string>AppleIntelCFLGraphicsFramebuffer</string>
+        <key>Replace</key>
+        <data>uAQAAACJhrwlAAAxwF3DlQ==</data>
+        <key>Disabled</key>
+        <false/>
+    </dict>
 ```
+
+
 ### 2/1/2019 : 10.14.3 
 - New Virtural SMC replacing FakeSMC
 - Added support for 4K video output with HDMI audio support
@@ -163,6 +159,36 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 - Reports of Thunderbolt eGPU was able to work when booted with eGPU plugged in, no hotplug support yet
 - Support for Liteon SSDs confirmed with new config.plist in CLOVER and in Configs folder
 
+### 1/23/2019 : 10.14.3 Update Graphics
+- New 10.14.3 graphics patch
+```
+CFL patch for MateBook X Pro (10.14.3 credit gnodipac886)
+Name: AppleIntelCFLGraphicsFramebuffer
+Find: <48ff0589 4d07008b 96c02500 008a8e95>
+Replace: <b8040000 008986bc 25000031 c05dc395>
+```
+```
+			<dict>
+				<key>Comment</key>
+				<string>CFL patch for MateBook X Pro (10.14.3 credit gnodipac886)</string>
+				<key>Find</key>
+				<data>SP8FiU0HAIuWwCUAAIqOlQ==</data>
+				<key>Name</key>
+				<string>AppleIntelCFLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>uAQAAACJhrwlAAAxwF3DlQ==</data>
+				<key>Disabled</key>
+				<false/>
+			</dict>
+```
+### 1/21/2019
+- New Whatevergreen replaced old custom version
+- Lilu updated
+- New Applealc to support native audio codec
+- Custom version of I2C trackpad kexts for better support
+- Added KBL and SKL config.plists for people who are interested to help out. Main issue: Blackscreen/ internal screen not recognized
+- config.plist minor fixes
+
 # Credits:
 - Darren_Pan on reddit
 - midi and Maemo on discord
@@ -171,10 +197,8 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 - All the developers who developed the kexts used in this guide.
 
 # Help a broke student out:
-- PayPal:
-	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
-- Venmo:
-	https://venmo.com/code?user_id=2386577070227456090
+- [PayPal](https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh)
+- [Venmo](https://venmo.com/code?user_id=2386577070227456090)
 	
 QR Codes:
 

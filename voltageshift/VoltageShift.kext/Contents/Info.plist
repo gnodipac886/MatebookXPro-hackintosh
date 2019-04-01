@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>17D102</string>
+	<string>17A405</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>Lilu</string>
+	<string>VoltageShift</string>
+	<key>CFBundleGetInfoString</key>
+	<string>VoltageShift 1.0, copyright © 2017 SC Lee. All rights reserved.</string>
 	<key>CFBundleIdentifier</key>
-	<string>as.vit9696.Lilu</string>
+	<string>com.sicreative.VoltageShift</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Lilu</string>
+	<string>VoltageShift</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.3.5</string>
+	<string>1.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,55 +27,45 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.3.5</string>
+	<string>1.1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>9F2000</string>
+	<string>9A235</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>17E189</string>
+	<string>17A360</string>
 	<key>DTSDKName</key>
 	<string>macosx10.13</string>
 	<key>DTXcode</key>
-	<string>0941</string>
+	<string>0900</string>
 	<key>DTXcodeBuild</key>
-	<string>9F2000</string>
+	<string>9A235</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>as.vit9696.Lilu</key>
+		<key>VoltageShiftAnVMSR</key>
 		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>as.vit9696.Lilu</string>
 			<key>IOClass</key>
-			<string>Lilu</string>
+			<string>VoltageShiftAnVMSR</string>
 			<key>IOMatchCategory</key>
-			<string>Lilu</string>
+			<string>VoltageShiftAnVMSR</string>
 			<key>IOProviderClass</key>
 			<string>IOResources</string>
 			<key>IOResourceMatch</key>
 			<string>IOKit</string>
+			<key>IOUserClientClass</key>
+			<string>AnVMSRClient</string>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2016-2018 vit9696. All rights reserved.</string>
-	<key>OSBundleCompatibleVersion</key>
-	<string>1.2.0</string>
+	<string>Copyright © 2017 SC Lee. All rights reserved.</string>
 	<key>OSBundleLibraries</key>
 	<dict>
-		<key>com.apple.kpi.bsd</key>
-		<string>12.0.0</string>
-		<key>com.apple.kpi.dsep</key>
-		<string>12.0.0</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>12.0.0</string>
+		<string>8.0.0b1</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>12.0.0</string>
-		<key>com.apple.kpi.mach</key>
-		<string>12.0.0</string>
-		<key>com.apple.kpi.unsupported</key>
-		<string>12.0.0</string>
+		<string>8.0.0b1</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Root</string>
