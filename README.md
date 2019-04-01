@@ -113,7 +113,7 @@ Known Problems and Partial Solutions:
 
 ### 4/1/2019: 10.14.4 & New Power Management Kexts
 - New CPUFriend and CPUFriendProvider kexts for better battery life. (~9 hrs)
-- Run the following code if you would like to make a custom version of the power management kexts to your liking, then install the kexts located at your desktop to Clover [Source](https://github.com/daliansky/XiaoMi-Pro/tree/master/one-key-cpufriend)
+- Run the following code if you would like to make a custom version of the power management kexts to your liking, then install the kexts located at your desktop to Clover. [Source](https://github.com/daliansky/XiaoMi-Pro/tree/master/one-key-cpufriend)
 ```
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/daliansky/XiaoMi-Pro/master/one-key-cpufriend/one-key-cpufriend.sh)"
 
