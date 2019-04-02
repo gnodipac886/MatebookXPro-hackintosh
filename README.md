@@ -111,6 +111,9 @@ Known Problems and Partial Solutions:
 
 # Updates
 
+### 4/2/2019: Config for Updating/Installing
+- Added New config-install/update.plist in CLOVER folder for installing purposes. You may choose this config in the boot screen of CLOVER: options - configs - config-install/update.plist
+
 ### 4/1/2019: 10.14.4 & New Power Management Kexts
 - New CPUFriend and CPUFriendProvider kexts for better battery life. (~9 hrs)
 - Run the following code if you would like to make a custom version of the power management kexts to your liking, then install the kexts located at your desktop to Clover. [Source](https://github.com/daliansky/XiaoMi-Pro/tree/master/one-key-cpufriend)
