@@ -26,7 +26,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - Touchscreen with multi-touch capabilities (think of it as a large trackpad)
 - Battery Percentage
 - Bluetooth (Reboot from Widows required)
-- Power Management (via CPUFriend and CPUFriendProvider, CPU idles at 1.2Ghz though Windows idles at 0.8GHz)
+- Power Management - I'm getting around 8-9 hours.
 - Wifi via USB dongle
 - Liton SSDs are now supported.
 - HDMI 2.0 support, up to theoretically 4K @60Hz. (Only 4K @30 tested due to equipment limitations)
