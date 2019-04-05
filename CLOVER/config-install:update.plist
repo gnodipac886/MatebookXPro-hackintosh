@@ -531,18 +531,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>CFL patch for MateBook X Pro (10.14.4 credit gnodipac886)</string>
-				<key>Find</key>
-				<data>SP8FV/YHAIuWwCUAAIqOlQ==</data>
-				<key>Name</key>
-				<string>AppleIntelCFLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>uAQAAACJhrwlAAAxwF3DlQ==</data>
-				<key>Disabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
 				<key>Disabled</key>
 				<false/>
