@@ -50,7 +50,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 ### BIOS Settings
 - f2 is for booting into BIOS
 - f12 is for boot override
-- Any version of the BIOS is good, but I'm version 1.18
+- Any version of the BIOS is good, but I'm on version 1.26
 - Restore Defaults
 - Disable Secure boot
 - Matebook's BIOS is rewrite protected, EFI tool is useless against this BIOS.
