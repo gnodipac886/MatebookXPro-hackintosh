@@ -111,6 +111,23 @@ Known Problems and Partial Solutions:
 
 # Updates
 
+### 4/11/2019: New LiteOn Patch
+- I haven't tested this yet since I don't have a LiteOn drive, but this should work theoretically. 
+```
+      <dict>
+        <key>Comment</key>
+        <string>IONVMeFamily: Ignore FLBAS bit:4 being set - for Plextor/LiteOn/Hynix</string>
+        <key>Disabled</key>
+        <false/>
+        <key>Name</key>
+        <string>IONVMeFamily</string>
+        <key>Find</key>
+        <data>SBr2wRAPhQ==</data>
+        <key>Replace</key>
+        <data>SBr2wQAPhQ==</data>
+      </dict>
+```
+
 ### 4/2/2019: Config for Updating/Installing
 - Added New config-install/update.plist in CLOVER folder for installing purposes. You may choose this config in the boot screen of Clover: options - configs - config-install/update.plist
 
