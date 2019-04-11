@@ -260,8 +260,10 @@
 		</dict>
 		<key>FakeID</key>
 		<dict>
-			<key>IntelGFX</key>
+			<key>#IntelGFX</key>
 			<string>0x59168086</string>
+			<key>#Kaby Lake-Comment</key>
+			<string>To avoid automatic Clover fake device-id (Skylake) injection</string>
 		</dict>
 		<key>Properties</key>
 		<dict>
@@ -435,12 +437,12 @@
 			<key>ATI</key>
 			<false/>
 			<key>Intel</key>
-			<true/>
+			<false/>
 			<key>NVidia</key>
 			<false/>
 		</dict>
-		<key>ig-platform-id</key>
-		<string>0x12345678</string>
+		<key>#ig-platform-id</key>
+		<string>0x3e9b0006</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -503,16 +505,18 @@
 		</array>
 		<key>KextsToPatch</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily: Ignore FLBAS bit:4 being set - for Plextor/LiteOn/Hynix (credit Pene)</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IONVMeFamily</string>
-				<key>Find</key>
-				<data>ikga9sEQ</data>
-				<key>Replace</key>
-				<data>ikga9sEA</data>
-			</dict>
+      <dict>
+        <key>Comment</key>
+        <string>IONVMeFamily: Ignore FLBAS bit:4 being set - for Plextor/LiteOn/Hynix</string>
+        <key>Disabled</key>
+        <false/>
+        <key>Name</key>
+        <string>IONVMeFamily</string>
+        <key>Find</key>
+        <data>SBr2wRAPhQ==</data>
+        <key>Replace</key>
+        <data>SBr2wQAPhQ==</data>
+      </dict>
 			<dict>
 				<key>Comment</key>
 				<string>USB 10.14 by PMHeart,FredWst</string>
@@ -528,6 +532,18 @@
 				<string>com.apple.driver.usb.AppleUSBXHCI</string>
 				<key>Replace</key>
 				<data>g/sPkJCQkJCQ</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>CFL patch for MateBook X Pro (10.14.4 credit gnodipac886)</string>
+				<key>Find</key>
+				<data>SP8FV/YHAIuWwCUAAIqOlQ==</data>
+				<key>Name</key>
+				<string>AppleIntelCFLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>uAQAAACJhrwlAAAxwF3DlQ==</data>
+				<key>Disabled</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Comment</key>
