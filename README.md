@@ -112,6 +112,7 @@ Known Problems and Partial Solutions:
 # Updates
 
 ### 4/11/2019: New LiteOn Patch
+- If you have problems updating to 10.14.4 (seeing a prohibited sign), its likely that the problem is caused by your liteon drive, please replace the following patch in your config.plist before you update.
 - I haven't tested this yet since I don't have a LiteOn drive, but this should work theoretically. 
 ```
       <dict>
