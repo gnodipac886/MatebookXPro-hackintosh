@@ -218,7 +218,7 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 - All the developers who developed the kexts used in this guide.
 
 # Help a broke student out:
-- [PayPal](https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh)
+- [PayPal](https://www.paypal.me/gnodipac)
 - [Venmo](https://venmo.com/code?user_id=2386577070227456090)
 	
 QR Codes:
