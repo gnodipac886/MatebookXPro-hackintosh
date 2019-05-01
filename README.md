@@ -110,6 +110,14 @@ Known Problems and Partial Solutions:
 - Sleep doesn't work: after waking from a sleep (closing the lid), your computer will wake and you will see a graphics glitch. This should be due to Coffeelake spoofing. We are trying to fix this. 
 
 # Updates
+### 5/1/2019: Most Important Update Yet
+- Native brightness is now working
+- macOS is able to automatically adjust the brightness accroding to the ambient light sensor
+- Native Sleep is now working, not more glitchy screen after computer comes out from sleep
+- Native graphics: we are now using KBL graphics, we had to change the maximum link rate to HBR in order for the screen to work
+- Better audio: speakers are now louder, you can always just use voodooHDA but you will lose headphone detection
+- WhatEverGreen updated to version 1.2.8
+
 
 ### 4/11/2019: New LiteOn Patch
 - If you have problems updating to 10.14.4 (seeing a prohibited sign), its likely that the problem is caused by your liteon drive, please replace the following patch in your config.plist before you update.
