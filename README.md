@@ -117,6 +117,7 @@ Known Problems and Partial Solutions:
 - Native graphics: we are now using KBL graphics, we had to change the maximum link rate to HBR in order for the screen to work
 - Better audio: speakers are now louder, you can always just use voodooHDA but you will lose headphone detection
 - WhatEverGreen updated to version 1.2.8
+- VoodooI2C kext updated
 - Note* you still need to patch your DSDT for trackpad to work, and brightness keys to work.
 
 
