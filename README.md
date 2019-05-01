@@ -113,10 +113,11 @@ Known Problems and Partial Solutions:
 ### 5/1/2019: Most Important Update Yet
 - Native brightness is now working
 - macOS is able to automatically adjust the brightness accroding to the ambient light sensor
-- Native Sleep is now working, not more glitchy screen after computer comes out from sleep
+- Native Sleep is now working, not more glitchy screen after computer comes out from sleep, fixed by injecting custom EDID values
 - Native graphics: we are now using KBL graphics, we had to change the maximum link rate to HBR in order for the screen to work
 - Better audio: speakers are now louder, you can always just use voodooHDA but you will lose headphone detection
 - WhatEverGreen updated to version 1.2.8
+- Note* you still need to patch your DSDT for trackpad to work, and brightness keys to work.
 
 
 ### 4/11/2019: New LiteOn Patch
