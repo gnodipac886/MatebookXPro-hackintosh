@@ -18,7 +18,9 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - USB Wifi: Edimax N150
 
 ## What works:
-- Intel UHD 620 Graphics Acceleration (we are using a CoffeeLake platform-id for now, will try to 	switch to native Kabylake graphics)
+- Intel UHD 620 Graphics Acceleration
+- Brightness
+- Sleep
 - Realtek alc256 Audio via AppleALC
 - Keyboard with Volume Controls and Brightness controls (via VoodooPS2)
 - Camera support up to 10.14.3
@@ -32,7 +34,6 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - HDMI 2.0 support, up to theoretically 4K @60Hz. (Only 4K @30 tested due to equipment limitations)
 
 ## What doesn't Work:
-- Brightness and Sleep (Likely due to spoofing Coffeelake Graphics)
 - dGPU (Nvidia Optimus not supported on MacOS)
 - eGPU (not tested)
 - Fingerprint Sensor
@@ -84,10 +85,11 @@ Mount EFI partition if not mounted already
 Clone the repository via terminal or download it and swap the CLOVER folder downloaded for the one in your EFI directory.
 
 ***Note if you have the i5 version, or any other configurations of the laptop sold exclusively in China***, you should:
-- delete the DSDT.aml file in /Volumes/EFI/EFI/CLOVER/ACPI/patched and generate your own via pressing f4 	at the clover bootscreen.
+- delete the DSDT.aml file in /Volumes/EFI/EFI/CLOVER/ACPI/patched and generate your own via pressing f4 at the clover bootscreen.
 - For i5 models: you have to make a custom CPUFriendProvider for Power Management by following [this](https://github.com/PMheart/CPUFriend/blob/master/Instructions.md) guide:
 	
 ### DSDT fixes
+Add the VoodooI2C patches (One for the SKL+ one for Windows 10 Patch)
 Add the following code to your DSDT.aml to fix brightness keys.
 ```	
 into method label _Q0A replace_content
