@@ -105,12 +105,6 @@ end;
 ```
 Reboot
 
-You should have a half functioning Matebook X Pro Hackintosh by now. 
-
-Known Problems and Partial Solutions:
-- Brightness not working: download [Brightness Slider](https://itunes.apple.com/us/app/brightness-slider/id456624497?mt=12) from the App Store, it doesn't change the actual brightness, but it pleases the eye since it changes the white spot level or something along those lines.
-- Sleep doesn't work: after waking from a sleep (closing the lid), your computer will wake and you will see a graphics glitch. This should be due to Coffeelake spoofing. We are trying to fix this. 
-
 # Updates
 ### 5/1/2019: Most Important Update Yet
 - Native brightness is now working
