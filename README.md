@@ -16,6 +16,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - 3K display @ 3000x2000
 - 512 Gb Toshiba SSD
 - USB Wifi: Edimax N150
+- Builtin Bluetooth: Intel Wireless Bluetooth 8265
 
 ## What works:
 - Intel UHD 620 Graphics Acceleration
@@ -27,7 +28,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - Trackpad and Native Gestures via Custom VoodooI2C
 - Touchscreen with multi-touch capabilities (think of it as a large trackpad)
 - Battery Percentage
-- Bluetooth (Reboot from Widows required)
+- Bluetooth (Reboot from Widows required - should persist after single reboot)
 - Power Management - I'm getting around 8-9 hours.
 - Wifi via USB dongle
 - Liton SSDs are now supported.
@@ -83,6 +84,8 @@ Download
 Mount EFI partition if not mounted already
 
 Clone the repository via terminal or download it and swap the CLOVER folder downloaded for the one in your EFI directory.
+
+**IMPORTANT** `BrcmFirmwareRepo.kext` is in `/CLOVER/kexts/Other` from this repository - make sure to move it to `/Library/Extensions`. These kexts will allow bluetooth to persist after a single reboot from Windows.
 
 ***Note if you have the i5 version, or any other configurations of the laptop sold exclusively in China***, you should:
 - delete the DSDT.aml file in /Volumes/EFI/EFI/CLOVER/ACPI/patched and generate your own via pressing f4 at the clover bootscreen.
