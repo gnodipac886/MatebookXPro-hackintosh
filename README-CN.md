@@ -4,7 +4,6 @@
 
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
 
-### 要是想要我帮你远程的话，加我QQ号：2804107102
 ***免责声明：***
 - 这个项目还在测试阶段，如果您有任何损坏，我将不承担任何责任。
 
@@ -17,7 +16,9 @@
 - USB Wifi: Edimax N150
 
 ## 能用的功能:
-- CFL 显卡驱动
+- KBL 显卡驱动
+- 睡眠
+- 亮度调节
 - Applealc 声卡
 - 键盘音量控制
 - 摄像机
@@ -29,7 +30,6 @@
 - U 盘 Wi-Fi
 
 ## 不能用的功能:
-- 亮度调节以及睡眠
 - MX 150
 - 外界显卡（没测试过）
 - 指纹识别
@@ -81,13 +81,12 @@ https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-w
 - 最新的Clover：
 	https://sourceforge.net/projects/cloverefiboot/
 
-加载EFI
+替换EFI
 
 下载我的github上的文件
 ***您要是有中国产的华为笔记本的话***, 您应该:
-- 删除 DSDT.aml 文件 ： /Volumes/EFI/EFI/CLOVER/ACPI/patched 生成您自己的dsdt.
 - i5的用户，请自己生成能源管理的kext。
-	https://github.com/PMheart/CPUFriend/blob/master/Instructions.md
+	https://github.com/stevezhengshiqi/one-key-cpufriend
 	
 ### DSDT 修理
 把下面的代码加入dsdt里面，修复键盘亮度调节.
@@ -123,6 +122,32 @@ end;
 
 # 更新：
 
+### 5/1/2019: 有史以来最重要的更新
+- KBL 亮度调节
+- 自动亮度调节
+- 睡眠
+- KBL 七代的核显
+- 声卡驱动更新
+- WhatEverGreen 更新至 1.2.8
+- VoodooI2C 更新
+- 你需要修改 DSDT 才能用触摸板，以及键盘控制亮度
+
+### 4/11/2019: New LiteOn Patch
+- 要是你有困难升级到 10.14.4， 请使用以下的补丁
+```
+      <dict>
+        <key>Comment</key>
+        <string>IONVMeFamily: Ignore FLBAS bit:4 being set - for Plextor/LiteOn/Hynix</string>
+        <key>Disabled</key>
+        <false/>
+        <key>Name</key>
+        <string>IONVMeFamily</string>
+        <key>Find</key>
+        <data>SBr2wRAPhQ==</data>
+        <key>Replace</key>
+        <data>SBr2wQAPhQ==</data>
+      </dict>
+```
 ### 1/21/2019
 - 新的whatevergreen
 - Lilu 更新
