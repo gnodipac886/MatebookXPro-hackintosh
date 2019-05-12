@@ -88,8 +88,7 @@ Clone the repository via terminal or download it and swap the CLOVER folder down
 **IMPORTANT** `BrcmFirmwareRepo.kext` is in `/CLOVER/kexts/Other` from this repository - make sure to move it to `/Library/Extensions`. These kexts will allow bluetooth to persist after a single reboot from Windows.
 
 ***Note if you have the i5 version, or any other configurations of the laptop sold exclusively in China***, you should:
-- delete the DSDT.aml file in /Volumes/EFI/EFI/CLOVER/ACPI/patched and generate your own via pressing f4 at the clover bootscreen.
-- For i5 models: you have to make a custom CPUFriendProvider for Power Management by following [this](https://github.com/PMheart/CPUFriend/blob/master/Instructions.md) guide:
+- For i5 models: you have to make a custom CPUFriendProvider for Power Management by following [this](https://github.com/stevezhengshiqi/one-key-cpufriend) guide:
 	
 ### DSDT fixes
 Add the VoodooI2C patches (One for the SKL+ one for Windows 10 Patch)
@@ -122,7 +121,6 @@ Reboot
 
 ### 4/11/2019: New LiteOn Patch
 - If you have problems updating to 10.14.4 (seeing a prohibited sign), its likely that the problem is caused by your liteon drive, please replace the following patch in your config.plist before you update.
-- I haven't tested this yet since I don't have a LiteOn drive, but this should work theoretically. 
 ```
       <dict>
         <key>Comment</key>
