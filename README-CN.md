@@ -2,6 +2,8 @@
 
 ### 钱要是嫌多的话可以在最下面给我捐点爱心. :)
 
+### QQ 群号： 812158410
+
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
 
 ***免责声明：***
