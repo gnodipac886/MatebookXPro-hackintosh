@@ -57,6 +57,10 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 - Disable Secure boot
 - Matebook's BIOS is rewrite protected, EFI tool is useless against this BIOS.
 
+## Installing from Windows 
+
+Read [our Windows installation guide](./WINDOWS_ONLY.md)
+
 ## Pre-Install:
 Prior to installing macOS, it is a good idea to backup any important files on Windows.
 
