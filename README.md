@@ -116,12 +116,13 @@ Reboot
 ### 6/1/2019: Pretty big update
 - New Autoinstaller that just installs everything for you in jsut one click (EFI partition NEEDS to be disk0s1)
 - We now use SSDT hotpatch for everything (no DSDT patching needed, plug and play)
-- iMessage, Facetime, and Siri now work again (you do need to inject system definition [tutorial](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/)
+- iMessage, Facetime, and Siri now work again (you do need to inject system definition: follow this [tutorial](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/))
 - Now supports up to two 4k@60hz monitors
 - New platform ID for better support (4k monitors etc. (ID: 0x591C0005))
 - Disable hibernation mode in script
 - You can now turn Bluetooth on and off (Credit carson_zsy)
 - New USB installation CLOVER folder for USB install
+- You can directly update to 14.5 now with out any plist swap
 - Update clover version
 - Updated Lilu
 - Updated VituralSMC
