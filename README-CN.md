@@ -123,6 +123,21 @@ end;
 - All the developers who developed the kexts used in this guide.
 
 # 更新：
+### 6/1/2019: 大更新
+- 添加了自动安装脚本， 一键驱动 (EFI 必须是 disk0s1)
+- 我们现在全用 hotpatch 打补丁 (不需要修改DSDT了)
+- iMessage, Facetime, 和 Siri 现在可以用了 (你必须改三码： [教程](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/))
+- 现在支持同时使用两个4k@60hz 的显示屏
+- 现在我们用新的 platform ID (驱动4k 显示屏(ID: 0x591C0005))
+- 在脚本里面添加了禁止休眠模式的代码
+- 蓝牙现在可以用开关了 (Credit carson_zsy)
+- 添加了新的U盘安装文件 （没测试过）
+- 可以直接升级14.5， 不用替换config
+- 更新了 clover
+- 更新了 Lilu
+- 更新了 VituralSMC
+- 更新了 Whatevergreen
+- 更新了 AppleALC
 
 ### 5/1/2019: 有史以来最重要的更新
 - KBL 亮度调节
