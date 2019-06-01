@@ -26,10 +26,23 @@ function checkEFI()
 	sudo diskutil mount /dev/disk0s1
 	DIR=/Volumes/EFI/EFI/CLOVER
 	if [ ! -d "$DIR" ]; then
-        echo "CLOVER files not found, please make sure to:"
-        echo "1. Mount your EFI partition"
-        echo "2. Rename your EFI partition to ""EFI"""
-		exit
+        echo "CLOVER files not found"
+        sleep 1
+        diskutil list
+        echo "Please type in your EFI location (ex: disk0s2) and then press enter"
+        read location
+        sudo diskutil mount /dev/$location
+        if [ ! -d "$DIR" ]; then
+            echo "Sorry, still no Clover files found"
+            echo "Please make sure that your EFI partition is named EFI, then run the script again"
+            sleep 3
+            echo "Goodbye"
+            sleep 1
+            exit
+        else
+            echo "CLOVER files found"
+        fi
+
 	else 
 		echo "CLOVER files found"
     fi
