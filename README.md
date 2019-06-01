@@ -78,6 +78,11 @@ Install macOS according to post 2 of [this](https://www.tonymacx86.com/threads/g
 
 ## Post Installation
 
+Please run this code in terminal:
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/onekey_installer.sh)"
+```
+
 You should now be at your desktop.
 
 Download
