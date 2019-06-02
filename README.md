@@ -12,7 +12,7 @@ Proceed at your own risk, I shall not take responsibility for any damages caused
 ## My Matebook X Pro's Hardware Configuration:
 - CPU: i7-8550U @ 1.8GHz
 - 16GB RAM
-- Nvidia GTX MX 150 / Intel UHD 620
+- Nvidia MX 150 / Intel UHD 620
 - 3K display @ 3000x2000
 - 512 Gb Toshiba SSD
 - USB Wifi: Edimax N150
