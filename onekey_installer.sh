@@ -41,8 +41,8 @@ function runScript()
     echo "Please help a broke student out please :)"
     echo "Thank you! Have a great day!"
     sleep 3
-    open .//Help\ a\ Broke\ Student\ out/paypal.png
-    open .//Help\ a\ Broke\ Student\ out/venmo.jpg
+    open ./Help\ a\ Broke\ Student\ out/paypal.png
+    open ./Help\ a\ Broke\ Student\ out/venmo.jpg
     exit
     ;;
 
