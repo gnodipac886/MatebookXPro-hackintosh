@@ -12,7 +12,7 @@ function downloadFiles()
     echo "------------------------------------------------------"
     echo "--| Downloading GitHub files into Downloads folder |--"
     echo "------------------------------------------------------"
-    curl -L -O "https://github.com/gnodipac886/MatebookXPro-hackintosh/archive/6.1.zip" -lol / --progress-bar || networkWarn
+    curl -L -O "https://github.com/gnodipac886/MatebookXPro-hackintosh/archive/6.1.zip" -# / --progress-bar || networkWarn
     echo "Download Complete"
     sleep 1
     echo "Unzipping Files"
