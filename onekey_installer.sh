@@ -37,7 +37,7 @@ function runScript()
 
     n)
     cd
-    cd /Downloads/MatebookXPro-hackintosh-6.1
+    cd Downloads/MatebookXPro-hackintosh-6.1
     echo "Please help a broke student out please :)"
     echo "Thank you! Have a great day!"
     sleep 3
@@ -56,9 +56,9 @@ function runScript()
 function main()
 {
     downloadFiles
-    sleep 3
+    sleep 2
     runScript
-    sleep 3
+    sleep 2
 }
 
 main
