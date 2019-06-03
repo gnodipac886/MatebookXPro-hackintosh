@@ -1,4 +1,4 @@
-function networkWarning()
+function networkWarn()
 {
     echo "ERROR: Fail to download GitHub Files, please check your Internet connection!"
     sleep 3
