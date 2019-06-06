@@ -370,16 +370,18 @@
 		<false/>
 		<key>KextsToPatch</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily: Ignore FLBAS bit:4 being set - for Plextor/LiteOn/Hynix (credit Pene)</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IONVMeFamily</string>
-				<key>Find</key>
-				<data>ikga9sEQ</data>
-				<key>Replace</key>
-				<data>ikga9sEA</data>
-			</dict>
+      <dict>
+        <key>Comment</key>
+        <string>IONVMeFamily: Ignore FLBAS bit:4 being set - for Plextor/LiteOn/Hynix</string>
+        <key>Disabled</key>
+        <false/>
+        <key>Name</key>
+        <string>IONVMeFamily</string>
+        <key>Find</key>
+        <data>SBr2wRAPhQ==</data>
+        <key>Replace</key>
+        <data>SBr2wQAPhQ==</data>
+      </dict>
 			<dict>
 				<key>Comment</key>
 				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
