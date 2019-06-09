@@ -9,7 +9,7 @@ This is the guide to install macOS onto the Huawei Matebook X Pro.
 The project is still in its beta/testing state.
 Proceed at your own risk, I shall not take responsibility for any damages caused.
 
-### For quick post installation, please run this following in terminal:
+### For quick post installation, please run this in terminal:
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/onekey_installer.sh)"
 ```
