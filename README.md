@@ -37,7 +37,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 - Power Management - I'm getting around 8-9 hours.
 - Wifi via USB dongle
 - Liton SSDs are now supported.
-- HDMI 2.0 support, up to theoretically 4K @60Hz. (Only 4K @30 tested due to equipment limitations)
+- HDMI 2.0 support, up to two 4K @60Hz monitors. 
 
 ## What doesn't Work:
 - dGPU (Nvidia Optimus not supported on MacOS)
