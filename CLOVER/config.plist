@@ -33,6 +33,14 @@
 			<array>
 				<dict>
 					<key>Comment</key>
+					<string>Rename Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
+					<key>Find</key>
+					<data>R1BSVwI=</data>
+					<key>Replace</key>
+					<data>WFBSVwI=</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change EC0 to EC</string>
 					<key>Disabled</key>
 					<true/>
