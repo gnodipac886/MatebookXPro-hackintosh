@@ -168,7 +168,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-cdfon -igfxmlr</string>
+		<string>darkwake=0 dart=0 -cdfon -igfxmlr</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
