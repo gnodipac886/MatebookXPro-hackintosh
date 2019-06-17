@@ -44,6 +44,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 - eGPU (not tested)
 - Fingerprint Sensor
 - Intel Wifi (soldered onto the motherbaord)
+- As of right now, Samgsung PM981 SSDs are not supported.
 
 ## Let's Get Started
 
