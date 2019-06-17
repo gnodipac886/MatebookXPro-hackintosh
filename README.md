@@ -21,7 +21,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 - 3K display @ 3000x2000
 - 512 Gb Toshiba SSD
 - USB Wifi: Edimax N150
-- Builtin Bluetooth: Intel Wireless Bluetooth 8265
+- Builtin Bluetooth: Intel Wireless Bluetooth 8275
 
 ## What works:
 - Intel UHD 620 Graphics Acceleration
