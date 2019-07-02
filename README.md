@@ -128,7 +128,7 @@ Reboot
 - Trackpad drivers updated
 - NoTouchID updated
 - You can now load bluetooth firmware in macOS without booting into windows. [Source](https://osxlatitude.com/forums/topic/10127-updated-nov-2017-fix-btfirmwareuploader-in-macos-high-sierra/)
-	0. Before any of this, make sure you have bluetooth avaliable in the menu, even if it says no hardware detected
+(Before any of this, make sure you have bluetooth avaliable in the menu, even if it says no hardware detected)
 	1. Download: [VMware](https://www.vmware.com/go/getfusion), and Tinycorelinux [Core.iso](http://tinycorelinux.net/10.x/x86/release/Core-10.1.iso)
 	2. Boot the iso file with VMware
 	3. Run the following command in terminal: 
