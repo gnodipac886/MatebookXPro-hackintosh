@@ -124,6 +124,24 @@ Reboot
 
 # Updates
 
+### 7/1/2019: Pretty Small Update
+- Trackpad drivers updated
+- NoTouchID updated
+- You can now load bluetooth firmware in macOS without booting into windows. [Source](https://osxlatitude.com/forums/topic/10127-updated-nov-2017-fix-btfirmwareuploader-in-macos-high-sierra/)
+	0. Before any of this, make sure you have bluetooth avaliable in the menu, even if it says no hardware detected
+	1. Download: [VMware](https://www.vmware.com/go/getfusion), and Tinycorelinux [Core.iso](http://tinycorelinux.net/10.x/x86/release/Core-10.1.iso)
+	2. Boot the iso file with VMware
+	3. Run the following command in terminal: 
+	```
+	tce-load -wil bluez usbutils firmware-intel
+
+	```
+	4. From the Core's Bluetooth settings, uncheck "Share Bluetooth devices with Linux"
+	5. Now, you should see Intel Bluetooth in the list of devices above
+	6. Check the Intel Bluetooth box and wait for about 4-5 seconds, during this time, the check may flicker, this is ok
+	7. Then uncheck the box, and you should see bluetooth is now avaliable to macOS.
+- Still working on optimizing battery, you may try patching DSDT with the common DSDT patches mentioned [here](https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/) to get a better idea.
+
 ### 6/1/2019: Pretty big update
 - New Autoinstaller that just installs everything for you in jsut one click (EFI partition NEEDS to be disk0s1)
 - We now use SSDT hotpatch for everything (no DSDT patching needed, plug and play)
