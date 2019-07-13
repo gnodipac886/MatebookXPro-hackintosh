@@ -16,7 +16,7 @@ function downloadFiles()
     echo "Download Complete"
     sleep 1
     echo "Unzipping Files"
-    unzip -qu "6.1"
+    unzip -qu "7.1"
     echo "Files unzipped"
     echo "Now running autoinstallation script..."
     sleep 1
@@ -31,13 +31,13 @@ function runScript()
     case "${lfm_selection}" in
     y)
     cd
-    cd Downloads/MatebookXPro-hackintosh-6.1
+    cd Downloads/MatebookXPro-hackintosh-7.1
     ./autoinstaller.command
     ;;
 
     n)
     cd
-    cd Downloads/MatebookXPro-hackintosh-6.1
+    cd Downloads/MatebookXPro-hackintosh-7.1
     echo "Please help a broke student out please :)"
     echo "Thank you! Have a great day!"
     sleep 3
