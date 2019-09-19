@@ -6,8 +6,6 @@ Estoy traduciendo la guía al Español
 
 Por favor ten paciencia
 
-### Tienes el libertad a ayudar a un estudiante pobre al fondo de la página
-
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
 
 ***RENUNCIA***
@@ -117,29 +115,4 @@ Known Problems and Partial Solutions:
 - Spanish Matebook X Pro Hackintosh community
 - All the developers who developed the kexts used in this guide.
 
-### Help a broke student out:
-- PayPal:
-	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
-- Venmo:
-	https://venmo.com/code?user_id=2386577070227456090
-	
-QR Codes:
-
-| PayPal                                                     | Venmo.                                                     | WeChat                                               |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
-| ![PayPal_160]( https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true) | ![venmo_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true) | ![Wechat_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/WeChat.jpg) |
-
-Good Luck!
-
-Si quieres ayudar un estudiante más pobre, me debes ayudar. :)
-
-- PayPal:
-	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
-- Venmo:
-	https://venmo.com/code?user_id=2386577070227456090
-	
-Códigos QR:
-
-| PayPal                                                     | Venmo.                                                     | WeChat                                               |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- |
-| ![PayPal_160]( https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true) | ![venmo_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true) | ![Wechat_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/WeChat.jpg) |
+Buena Suerte!
