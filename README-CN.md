@@ -1,7 +1,5 @@
 # 华为 Matebook X Pro 黑苹果教程
 
-### 钱要是嫌多的话可以在最下面给我捐点爱心. :)
-
 ### QQ 群号： 812158410
 
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
@@ -194,17 +192,4 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 				<false/>
 			</dict>
 ```
-
-### 帮帮我呗:
-- PayPal:
-	https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
-- Venmo:
-	https://venmo.com/code?user_id=2386577070227456090
-	
-QR Codes:
-
-| 支付宝                                                     | PayPal                                                     | Venmo.                                                     | 微信                                               |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
-| ![支付宝_160]( https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/Help%20a%20Broke%20Student%20out/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg) | ![PayPal_160]( https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true) | ![venmo_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true) | ![Wechat_160](https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/Help%20a%20Broke%20Student%20out/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.jpg) |
-
 祝您好运!
