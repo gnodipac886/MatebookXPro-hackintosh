@@ -1,8 +1,6 @@
 # Matebook X Pro Hackintosh
 This is the guide to install macOS onto the Huawei Matebook X Pro.
 
-### Feel free to help a broke student out at the bottom of the page. :)
-
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
 
 ***DISCLAIMER***
@@ -273,15 +271,5 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 - Chinese Matebook X Pro Hackintosh community
 - Spanish Matebook X Pro Hackintosh community
 - All the developers who developed the kexts used in this guide.
-
-# Help a broke student out:
-- [PayPal](https://www.paypal.me/gnodipac)
-- [Venmo](https://venmo.com/code?user_id=2386577070227456090)
-	
-QR Codes:
-
-| PayPal                                                     | Venmo.                                                     | WeChat                                               | 支付宝                                              |
-| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
-| ![PayPal_160]( https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true) | ![venmo_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true) | ![Wechat_160](https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/Help%20a%20Broke%20Student%20out/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.jpg) | ![支付宝_160](https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/Help%20a%20Broke%20Student%20out/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg) |
 
 Good Luck!
