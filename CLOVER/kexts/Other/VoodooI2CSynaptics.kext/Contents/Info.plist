@@ -7,17 +7,19 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>VoodooI2CServices</string>
+	<string>VoodooI2CSynaptics</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.alexandred.VoodooI2CServices</string>
+	<string>com.alexandred.VoodooI2CSynaptics</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>VoodooI2CServices</string>
+	<string>VoodooI2CSynaptics</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleSpokenName</key>
+	<string></string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
@@ -40,39 +42,37 @@
 	<string>10E125</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>VoodooI2CLogger</key>
+		<key>VoodooI2CHIDDevice</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.alexandred.VoodooI2CServices</string>
+			<string>com.alexandred.VoodooI2CSynaptics</string>
 			<key>IOClass</key>
-			<string>VoodooI2CLogger</string>
-			<key>IOMatchCategory</key>
-			<string>VoodooI2CLogger</string>
+			<string>VoodooI2CSynapticsDevice</string>
+			<key>IOProbeScore</key>
+			<integer>400</integer>
+			<key>IOPropertyMatch</key>
+			<dict>
+				<key>name</key>
+				<string>SYNA2B33</string>
+			</dict>
 			<key>IOProviderClass</key>
-			<string>VoodooI2CServices</string>
-		</dict>
-		<key>VoodooI2CServices</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.alexandred.VoodooI2CServices</string>
-			<key>IOClass</key>
-			<string>VoodooI2CServices</string>
-			<key>IOMatchCategory</key>
-			<string>VoodooI2CServices</string>
-			<key>IOProviderClass</key>
-			<string>IOResources</string>
+			<string>VoodooI2CDeviceNub</string>
 		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 Alexandre Daoud. All rights reserved.</string>
-	<key>OSBundleCompatibleVersion</key>
-	<string>1.0.0</string>
 	<key>OSBundleLibraries</key>
 	<dict>
+		<key>com.alexandred.VoodooI2C</key>
+		<string>2.0</string>
+		<key>com.apple.iokit.IOACPIFamily</key>
+		<string>1.4</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>14</string>
+		<string>15.6</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>14</string>
+		<string>15.6</string>
+		<key>com.apple.kpi.mach</key>
+		<string>15.6</string>
 	</dict>
 </dict>
 </plist>
