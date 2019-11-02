@@ -122,6 +122,11 @@ Reboot
 
 # Updates
 
+### 11/1/2019: 10.15 Catalina
+- Updated Kexts for Catalina support
+- Updated clover version for Catalina support
+- Adjusted brightness control method for Catalina support
+
 ### 7/1/2019: Pretty Small Update
 - Trackpad drivers updated
 - NoTouchID updated
