@@ -1,0 +1,20 @@
+HdaCodecDump Start
+Codec: Intel Kaby Lake HDMI
+Address: 2
+AFG Function Id: 0x1 (unsol 0)
+Vendor ID: 0x8086280B
+Revision ID: 0x00100000
+Default PCM: N/A
+Default Amp-In caps: N/A
+Default Amp-Out caps: N/A
+Node 0x02 [Audio Output] wcaps 0x00006611: Stereo Digital
+Node 0x03 [Pin Complex] wcaps 0x0040778D: Stereo Digital Amp-Out
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=00, mute=1
+  Amp-Out vals: [0x00 0x00]
+  Pincap 0x09000094: OUT Detect HBR HDMI DP
+  Pin Default 0x18560010: [Jack] Digital Out at Int Special
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x00:
+  Connection: 1
+     0x02
