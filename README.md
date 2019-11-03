@@ -127,6 +127,22 @@ This is usually caused by a Windows update affecting EFI files. Here's how to fi
 
 That's it! Dual boot should be fixed.
 
+## Bluetooth Fix
+
+Before any of this, make sure you have bluetooth avaliable in the menu, even if it says no hardware detected
+
+1. Download: [VMware](https://www.vmware.com/go/getfusion), and Tinycorelinux [Core.iso](http://tinycorelinux.net/10.x/x86/release/Core-10.1.iso)  
+2. Boot the iso file with VMware  
+3. Run the following command in terminal: 
+```
+$ tce-load -wil bluez usbutils firmware-intel  
+```  
+4. From the Core's Bluetooth settings, uncheck "Share Bluetooth devices with Linux"  
+5. Now, you should see Intel Bluetooth in the list of devices above  
+6. Check the Intel Bluetooth box and wait for about 4-5 seconds, during this time, the check may flicker, this is ok  
+7. Then uncheck the box, and you should see bluetooth is now avaliable to macOS.
+
+> Instead of shutting down the VM, pause it and quit VMware. This saves you trouble of having to re-type the command each time, just repeat steps 4 - 7.
 
 # Updates
 
