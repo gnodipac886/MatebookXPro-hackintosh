@@ -113,6 +113,21 @@ end;
 ```
 Reboot
 
+## Dual Booting Fix
+
+After Windows updates, Clover EFI might be ignored making your system boot straight to Windows.
+This is usually caused by a Windows update affecting EFI files. Here's how to fix it:
+
+1. Grab the [gibMacOS Scripts](https://github.com/corpnewt/gibMacOS)
+2. Run `MakeInstall.bat`
+3. Choose to install clover only in the script - for example, if your drive number is `1` then enter `1C` for the `MakeInstall.bat` script and press enter
+4. Boot from your USB that you installed Clover to and go to MacOS
+5. Mount your boot disk EFI partition using Clover Configurator
+6. In `EFI/Microsoft` or `EFI/Windows` rename the boot EFIs (`boot.efi` and `bootmgfw.efi`) to `<original_name>-orig.efi`.
+
+That's it! Dual boot should be fixed.
+
+
 # Updates
 
 ### 11/1/2019: 10.15 Catalina
