@@ -18,7 +18,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 - Nvidia MX 150 / Intel UHD 620
 - 3K display @ 3000x2000
 - 512 Gb Toshiba SSD
-- USB Wifi: Edimax N150
+- USB Wifi: Edimax N150 (2.4 GHz only but cheap) / [Edimax AC1200 (2.4 + 5GHz)](https://www.amazon.com/gp/product/B01MY7PL10/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 - Builtin Bluetooth: Intel Wireless Bluetooth 8275
 
 ## What works:
@@ -61,24 +61,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 - Disable Secure boot
 - Matebook's BIOS is rewrite protected, EFI tool is useless against this BIOS.
 
-## Installing from Windows 
+## Installing Without A MacOS Device
 
-Read [our Windows installation guide](./WINDOWS_ONLY.md)
+If you don't have a machine running MacOS, you can easily create your bootable USB following these steps:
 
-## Pre-Install:
-Prior to installing macOS, it is a good idea to backup any important files on Windows.
+1. Download [gibMacOS Scripts](https://github.com/corpnewt/gibMacOS)
+2. Run `gibMacOS.bat`
+3. Run `MakeInstall.bat`
+4. Copy clover files from this repo onto your USB
+> You can copy over any WiFi dongle drivers or tools you may need onto your USB for post installation
+5. Boot from USB and select `"Boot macOS install from OS X Base System"`
+6. System will reboot choose option `"Boot macOS from <your_drive_name>"`
 
-- You can also leave Windows intact, but it can get tricky. Read [here](http://www.tonymacx86.com/multi-booting/133940-mavericks-windows-8-same-drive-without-erasing.html) for more information: 
-
-- [This](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) guide for creating USB and installing using Clover UEFI works well for this laptop: 
-
-- For the installation purposes, please use the HD620 plist that rehabman provides in his guide for your installation USB.
-
-***Set config.plist/Graphics/ig-platform-id=0x12345678 for installation.***
-
-I ended up wiping windows and installing it afterwards, if you do so, fingerprint sensor will stop working, please follow the guide from [this](http://bradshacks.com/matebook-x-pro-fingerprint/) link:
-
-Install macOS according to post 2 of [this](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) guide.
+Just follow through the steps and you should be good to go.
 
 ## Post Installation
 
@@ -97,8 +92,6 @@ Download
 Mount EFI partition if not mounted already
 
 Clone the repository via terminal or download it and swap the CLOVER folder downloaded for the one in your EFI directory.
-
-**IMPORTANT** `BrcmFirmwareRepo.kext` is in `/CLOVER/kexts/Other` from this repository - make sure to move it to `/Library/Extensions`. These kexts will allow bluetooth to persist after a single reboot from Windows.
 
 ***Note if you have the i5 version, or any other configurations of the laptop sold exclusively in China***, you should:
 - For i5 models: you have to make a custom CPUFriendProvider for Power Management by following [this](https://github.com/stevezhengshiqi/one-key-cpufriend) guide:
@@ -119,6 +112,37 @@ begin
 end;
 ```
 Reboot
+
+## Dual Booting Fix
+
+After Windows updates, Clover EFI might be ignored making your system boot straight to Windows.
+This is usually caused by a Windows update affecting EFI files. Here's how to fix it:
+
+1. Grab the [gibMacOS Scripts](https://github.com/corpnewt/gibMacOS)
+2. Run `MakeInstall.bat`
+3. Choose to install clover only in the script - for example, if your drive number is `1` then enter `1C` for the `MakeInstall.bat` script and press enter
+4. Boot from your USB that you installed Clover to and go to MacOS
+5. Mount your boot disk EFI partition using Clover Configurator
+6. In `EFI/Microsoft` or `EFI/Windows` rename the boot EFIs (`boot.efi` and `bootmgfw.efi`) to `<original_name>-orig.efi`.
+
+That's it! Dual boot should be fixed.
+
+## Bluetooth Fix
+
+Before any of this, make sure you have bluetooth avaliable in the menu, even if it says no hardware detected
+
+1. Download: [VMware](https://www.vmware.com/go/getfusion), and Tinycorelinux [Core.iso](http://tinycorelinux.net/10.x/x86/release/Core-10.1.iso)  
+2. Boot the iso file with VMware  
+3. Run the following command in terminal: 
+```
+$ tce-load -wil bluez usbutils firmware-intel  
+```  
+4. From the Core's Bluetooth settings, uncheck "Share Bluetooth devices with Linux"  
+5. Now, you should see Intel Bluetooth in the list of devices above  
+6. Check the Intel Bluetooth box and wait for about 4-5 seconds, during this time, the check may flicker, this is ok  
+7. Then uncheck the box, and you should see bluetooth is now avaliable to macOS.
+
+> Instead of shutting down the VM, pause it and quit VMware. This saves you trouble of having to re-type the command each time, just repeat steps 4 - 7.
 
 # Updates
 
