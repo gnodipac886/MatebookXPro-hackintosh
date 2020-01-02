@@ -158,15 +158,16 @@ $ tce-load -wil bluez usbutils firmware-intel
 
 # Updates
 
-### 1/1/2020: Update of the Decade (I've worked really really hard on this one, so please feel free to help a broke student out [here](https://github.com/gnodipac886/MatebookXPro-hackintosh#help-a-broke-student-out))
+### 1/1/2020: Update of the Decade 
+> (I've worked really really hard on this one, so please feel free to help a broke student out [here](https://github.com/gnodipac886/MatebookXPro-hackintosh#help-a-broke-student-out))
 - Fixed battery draining during sleep cause by bluetooth chip
 - Fixed battery draining issue by adding a custom SSDT-DDGPU to turn off the MX150 (10+ hour usage according to Coconut Battery)
 - Added SSDT-DRP11 in order to turn off the currently unsupported Intel Wifi card (there's a substantial effort in developing an Intel Wifi card)
-- Added IntelBluetoothFirmware.kext[Link](https://github.com/zxystd/IntelBluetoothFirmware)
+- Added IntelBluetoothFirmware.kext [Link](https://github.com/zxystd/IntelBluetoothFirmware)
 	1. Enables bluetooth firmware loading on cold boot
 	2. Allows bluetooth on/off in menu bar and settings
 - Redid the ALC265 codec support on the MXP
-	1. Added support for multi channels in order to use 4/4 speakers on the Matebook X Pro. (Tutorial [link](https://github.com/gnodipac886/MatebookXPro-hackintosh#activate-surround-sound-via-midi)
+	1. Added support for multi channels in order to use 4/4 speakers on the Matebook X Pro. (Tutorial [link](https://github.com/gnodipac886/MatebookXPro-hackintosh#activate-surround-sound-via-midi))
 	2. Added support for headset mic line in, (please select that in settings if you would like to headset mic)
 	3. Fixed volume mute button
 - Fixed USB properties
