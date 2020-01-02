@@ -1,5 +1,7 @@
 # 华为 Matebook X Pro 黑苹果教程
 
+### 钱要是嫌多的话可以在[这里](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/README-CN.md#帮帮我呗)，或最下面给我捐点爱心. :) 
+
 ### QQ 群号： 812158410
 
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
@@ -121,6 +123,20 @@ end;
 - All the developers who developed the kexts used in this guide.
 
 # 更新：
+
+### 1/1/2020: 新时代的更新 (我这次玩大了，累死了，希望可以给我[打赏](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/README-CN.md#帮帮我呗))
+- 修复睡眠好点问题
+- 修复电池续航问题：加了 SSDT-DDGPU
+- 用SSDT-DRP11 关闭英特尔网卡
+- 加了 IntelBluetoothFirmware.kext[链接](https://github.com/zxystd/IntelBluetoothFirmware)
+1. 蓝牙可以冷启动了
+2. 可以在系统里开关蓝牙
+- 重新整理了声卡
+1. 现在4个喇叭都可以用 (教程[链接](https://github.com/gnodipac886/MatebookXPro-hackintosh#activate-surround-sound-via-midi)
+2. 可以使用耳麦
+3. 修复了静音键
+- 修复了USB
+
 ### 6/1/2019: 大更新
 - 添加了自动安装脚本， 一键驱动 (EFI 必须是 disk0s1)
 - 我们现在全用 hotpatch 打补丁 (不需要修改DSDT了)
@@ -192,4 +208,18 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 				<false/>
 			</dict>
 ```
+
+### 帮帮我呗:
+- PayPal:
+    https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
+- Venmo:
+    https://venmo.com/code?user_id=2386577070227456090
+
+QR Codes:
+
+| 支付宝                                                     | PayPal                                                     | Venmo.                                                     | 微信                                               |
+| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
+| ![支付宝_160]( https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/Help%20a%20Broke%20Student%20out/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg) | ![PayPal_160]( https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true) | ![venmo_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true) | ![Wechat_160](https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/Help%20a%20Broke%20Student%20out/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.jpg) |
+
+
 祝您好运!

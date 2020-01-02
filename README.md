@@ -1,6 +1,8 @@
 # Matebook X Pro Hackintosh
 This is the guide to install macOS onto the Huawei Matebook X Pro.
 
+### Click [here](https://github.com/gnodipac886/MatebookXPro-hackintosh#help-a-broke-student-out) to help a broke student out or at the bottom of the page. :)
+
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
 
 ***DISCLAIMER***
@@ -127,7 +129,17 @@ This is usually caused by a Windows update affecting EFI files. Here's how to fi
 
 That's it! Dual boot should be fixed.
 
-## Bluetooth Fix
+## Activate Surround Sound via MIDI
+1. Open Audio MIDI Setup from applications
+2. Click on the "+" symbol on the bottom left corner
+3. Click "Create Muti-Output Device"
+4. Check both of the Built-in Output options 
+5. Select the newly created device in the menu bar
+6. Enjoy your music!
+
+> (Note, there is no volume control for multi-channel devices in macOS, so in order to change the volume, you'd have to change the individual volume on each output, or get dedicated software)
+
+## Bluetooth Fix (Deprecated)
 
 Before any of this, make sure you have bluetooth avaliable in the menu, even if it says no hardware detected
 
@@ -145,6 +157,19 @@ $ tce-load -wil bluez usbutils firmware-intel
 > Instead of shutting down the VM, pause it and quit VMware. This saves you trouble of having to re-type the command each time, just repeat steps 4 - 7.
 
 # Updates
+
+### 1/1/2020: Update of the Decade (I've worked really really hard on this one, so please feel free to help a broke student out [here](https://github.com/gnodipac886/MatebookXPro-hackintosh#help-a-broke-student-out))
+- Fixed battery draining during sleep cause by bluetooth chip
+- Fixed battery draining issue by adding a custom SSDT-DDGPU to turn off the MX150
+- Added SSDT-DRP11 in order to turn off the currently unsupported Intel Wifi card (there's a substantial effort in developing an Intel Wifi card)
+- Added IntelBluetoothFirmware.kext[Link](https://github.com/zxystd/IntelBluetoothFirmware)
+1. Enables bluetooth firmware loading on cold boot
+2. Allows bluetooth on/off in menu bar and settings
+- Redid the ALC265 codec support on the MXP
+1. Added support for multi channels in order to use 4/4 speakers on the Matebook X Pro. (Tutorial [link](https://github.com/gnodipac886/MatebookXPro-hackintosh#activate-surround-sound-via-midi)
+2. Added support for headset mic line in, (please select that in settings if you would like to headset mic)
+3. Fixed volume mute button
+- Fixed USB properties
 
 ### 11/1/2019: 10.15 Catalina
 - Updated Kexts for Catalina support
@@ -300,5 +325,16 @@ Replace: <b8040000 008986bc 25000031 c05dc395>
 - Chinese Matebook X Pro Hackintosh community
 - Spanish Matebook X Pro Hackintosh community
 - All the developers who developed the kexts used in this guide.
+
+# Help a broke student out:
+- [PayPal](https://www.paypal.me/gnodipac)
+- [Venmo](https://venmo.com/code?user_id=2386577070227456090)
+
+QR Codes:
+
+| PayPal                                                     | Venmo.                                                     | WeChat                                               | 支付宝                                              |
+| ---------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
+| ![PayPal_160]( https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/paypal.png?raw=true) | ![venmo_160](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/Help%20a%20Broke%20Student%20out/venmo.jpg?raw=true) | ![Wechat_160](https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/Help%20a%20Broke%20Student%20out/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.jpg) | ![支付宝_160](https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/Help%20a%20Broke%20Student%20out/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg) |
+
 
 Good Luck!
