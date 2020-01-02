@@ -171,6 +171,7 @@ $ tce-load -wil bluez usbutils firmware-intel
 	2. Added support for headset mic line in, (please select that in settings if you would like to headset mic)
 	3. Fixed volume mute button
 - Fixed USB properties
+- Added USB installation EFI files (Please rename to EFI after you copy it to the root directory of your EFI partition on your USB)
 
 ### 11/1/2019: 10.15 Catalina
 - Updated Kexts for Catalina support
