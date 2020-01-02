@@ -160,7 +160,7 @@ $ tce-load -wil bluez usbutils firmware-intel
 
 ### 1/1/2020: Update of the Decade (I've worked really really hard on this one, so please feel free to help a broke student out [here](https://github.com/gnodipac886/MatebookXPro-hackintosh#help-a-broke-student-out))
 - Fixed battery draining during sleep cause by bluetooth chip
-- Fixed battery draining issue by adding a custom SSDT-DDGPU to turn off the MX150
+- Fixed battery draining issue by adding a custom SSDT-DDGPU to turn off the MX150 (10+ hour usage according to Coconut Battery)
 - Added SSDT-DRP11 in order to turn off the currently unsupported Intel Wifi card (there's a substantial effort in developing an Intel Wifi card)
 - Added IntelBluetoothFirmware.kext[Link](https://github.com/zxystd/IntelBluetoothFirmware)
 1. Enables bluetooth firmware loading on cold boot
