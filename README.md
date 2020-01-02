@@ -163,7 +163,7 @@ $ tce-load -wil bluez usbutils firmware-intel
 - Fixed battery draining during sleep cause by bluetooth chip
 - Fixed battery draining issue by adding a custom SSDT-DDGPU to turn off the MX150 (10+ hour usage according to Coconut Battery)
 - Added SSDT-DRP11 in order to turn off the currently unsupported Intel Wifi card (there's a substantial effort in developing an Intel Wifi card)
-- Added IntelBluetoothFirmware.kext [Link](https://github.com/zxystd/IntelBluetoothFirmware)
+- Added IntelBluetoothFirmware.kext [link](https://github.com/zxystd/IntelBluetoothFirmware)
 	1. Enables bluetooth firmware loading on cold boot
 	2. Allows bluetooth on/off in menu bar and settings
 - Redid the ALC265 codec support on the MXP
