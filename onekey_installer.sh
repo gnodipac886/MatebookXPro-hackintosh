@@ -12,11 +12,11 @@ function downloadFiles()
     echo "------------------------------------------------------"
     echo "--| Downloading GitHub files into Downloads folder |--"
     echo "------------------------------------------------------"
-    curl -L -O "https://github.com/gnodipac886/MatebookXPro-hackintosh/archive/1.1.20.1.zip" -# || networkWarn
+    curl -L -O "https://github.com/gnodipac886/MatebookXPro-hackintosh/archive/1.1.20.2.zip" -# || networkWarn
     echo "Download Complete"
     sleep 1
     echo "Unzipping Files"
-    unzip -qu "1.1.20.1"
+    unzip -qu "1.1.20.2"
     echo "Files unzipped"
     echo "Now running autoinstallation script..."
     sleep 1
@@ -31,13 +31,13 @@ function runScript()
     case "${lfm_selection}" in
     y)
     cd
-    cd Downloads/MatebookXPro-hackintosh-1.1.20.1
+    cd Downloads/MatebookXPro-hackintosh-1.1.20.2
     ./autoinstaller.command
     ;;
 
     n)
     cd
-    cd Downloads/MatebookXPro-hackintosh-1.1.20.1
+    cd Downloads/MatebookXPro-hackintosh-1.1.20.2
     echo "Please help a broke student out please :)"
     echo "Thank you! Have a great day!"
     sleep 3
