@@ -489,8 +489,6 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
-		<key>BoardVersion</key>
-		<string>MacBookPro14,1</string>
 		<key>Mobile</key>
 		<true/>
 		<key>ProductName</key>
