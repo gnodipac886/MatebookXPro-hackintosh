@@ -207,7 +207,7 @@
 			<key>Generate</key>
 			<dict>
 				<key>PluginType</key>
-				<false/>
+				<true/>
 			</dict>
 		</dict>
 	</dict>
