@@ -33,6 +33,16 @@
 			<array>
 				<dict>
 					<key>Comment</key>
+					<string>change EHC1 to EH01, optionally pair with SSDT-EH01.aml</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUhDMQ==</data>
+					<key>Replace</key>
+					<data>RUgwMQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>Rename Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
 					<key>Find</key>
 					<data>R1BSVwI=</data>
@@ -129,6 +139,46 @@
 					<key>Replace</key>
 					<data>SUdQVQ==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename XHCI to XHC (USB)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>WEhDSQ==</data>
+					<key>Replace</key>
+					<data>WEhDXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename XHC1 to XHC (USB)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>WEhDMQ==</data>
+					<key>Replace</key>
+					<data>WEhDXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename EHC2 to EH02 (USB)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>RUhDMg==</data>
+					<key>Replace</key>
+					<data>RUgwMg==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename LPC to LPCB (Power)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>TFBDXw==</data>
+					<key>Replace</key>
+					<data>TFBDQg==</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
@@ -156,19 +206,15 @@
 			<false/>
 			<key>Generate</key>
 			<dict>
-				<key>CStates</key>
-				<false/>
-				<key>PStates</key>
-				<false/>
 				<key>PluginType</key>
-				<true/>
+				<false/>
 			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>darkwake=0 dart=0 -cdfon -igfxmlr</string>
+		<string>dart=0 -cdfon -igfxmlr darkwake=1 gfxrst=1</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -196,7 +242,7 @@
 	<key>CPU</key>
 	<dict>
 		<key>HWPEnable</key>
-		<true/>
+		<false/>
 		<key>UseARTFrequency</key>
 		<false/>
 	</dict>
@@ -224,12 +270,12 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>AAPL00,override-no-connect</key>
-				<data>AP///////wAoiSpCAAAAAAAbAQSQHRR4A95Qo1RMmSYPUFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgMJcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkgICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgAE4=</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>BQAcWQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal</string>
+				<key>AAPL00,override-no-connect</key>
+				<data>AP///////wAoiSpCAAAAAAAbAQSQHRR4A95Qo1RMmSYPUFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgMJcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkgICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgAE4=</data>
 				<key>device-id</key>
 				<data>HFkAAA==</data>
 				<key>device_type</key>
@@ -238,12 +284,6 @@
 				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AABgAg==</data>
-				<key>framebuffer-unifiedmem</key>
-				<data>AAAAgA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
 				<key>framebuffer-con1-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con1-flags</key>
@@ -252,12 +292,18 @@
 				<data>AAgAAA==</data>
 				<key>framebuffer-con2-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con2-type</key>
-				<data>AAgAAA==</data>
 				<key>framebuffer-con2-flags</key>
 				<data>xwMAAA==</data>
+				<key>framebuffer-con2-type</key>
+				<data>AAgAAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AABgAg==</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>AAAAgA==</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>model</key>
@@ -307,6 +353,8 @@
 	<dict>
 		<key>#EDID</key>
 		<dict>
+			<key>#Custom</key>
+			<data>AP///////wAGEHycAAAAAAAbAQS1HRRgA2+xp1VMniUMUFQAAAABAQEBAQEBAQEBAQEBAQEBt5i4oLDQPnAIIAgMJcQQAAAat5i4oLDQQXIIIAgMJcQQAAAaAAAA/gBKREkgICAgICAgICAgAAAA/gBMUE0xMzlNNDIyQSAgADg=</data>
 			<key>Inject</key>
 			<false/>
 		</dict>
@@ -378,18 +426,6 @@
 		<false/>
 		<key>KextsToPatch</key>
 		<array>
-      <dict>
-        <key>Comment</key>
-        <string>IONVMeFamily: Ignore FLBAS bit:4 being set - for Plextor/LiteOn/Hynix</string>
-        <key>Disabled</key>
-        <false/>
-        <key>Name</key>
-        <string>IONVMeFamily</string>
-        <key>Find</key>
-        <data>SBr2wRAPhQ==</data>
-        <key>Replace</key>
-        <data>SBr2wQAPhQ==</data>
-      </dict>
 			<dict>
 				<key>Comment</key>
 				<string>Prevent Apple I2C kexts from attaching to I2C controllers, credit CoolStar</string>
@@ -414,6 +450,34 @@
 				<key>Replace</key>
 				<data>SU9LaXM=</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port limit patch #1/2 10.15.x (credit DalianSky)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>g/sPDw==</data>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Name</key>
+				<string>com.apple.iokit.IOUSBHostFamily</string>
+				<key>Replace</key>
+				<data>g/s/Dw==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>USB Port limit patch #2/2 10.15.x (credit DalianSky)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>g/kPDw==</data>
+				<key>MatchOS</key>
+				<string>10.15.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.usb.AppleUSBXHCI</string>
+				<key>Replace</key>
+				<data>g/k/Dw==</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -425,6 +489,10 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>BoardVersion</key>
+		<string>MacBookPro14,1</string>
+		<key>Mobile</key>
+		<true/>
 		<key>ProductName</key>
 		<string>MacBookPro14,1</string>
 		<key>Trust</key>
