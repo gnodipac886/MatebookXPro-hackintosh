@@ -1,21 +1,17 @@
 # Guía para Huawei Matebook X Pro hackintosh
 
-### Tienes el libertad a ayudar a un estudiante pobre al fondo de la página o [aquí](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/README-ESP.md#ayúdame-por-favor)
+### Tienes la libertad de ayudar a un estudiante pobre al fondo de la página o [aquí](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/README-ESP.md#ayúdame-por-favor)
 
-Este guía es para instalar macOS al Huawei Matebook X Pro.
-
-Estoy traduciendo la guía al Español
-
-Por favor ten paciencia
+Esta guía es para instalar macOS en Huawei Matebook X Pro.
 
 [English](README.md) | [中文](README-CN.md)| [Español](README-ESP.md)
 
 ***RENUNCIA***
 
 Este proyecto está todavia en el estado de prueba.
-Continúa bajo su cuenta y riesgo.
+Queda bajo su resposabilidad cualquier problema surgido.
 
-## La Configuración de mi Matebook X Pro :
+## Especificaciones de mi Matebook X Pro :
 - CPU: i7-8550U @ 1.8GHz
 - 16GB RAM
 - Nvidia GTX MX150 / Intel UHD 620
@@ -23,27 +19,27 @@ Continúa bajo su cuenta y riesgo.
 - 512 Gb Toshiba SSD (No he probado todavía los SSDs de Liteon)
 - USB Wifi: Edimax N150
 
-## Los que funciona:
+## Lo que funciona:
 - Aceleración de Intel UHD 620 gráficos (Ahora estamos usando un platform-id CoffeeLake, cambiaremos al Kabylake gráficos en el futuro)
 - Realtek alc256 Audio con VoodooHDA
 - Teclado con control de volumen (via VoodooPS2)
 - HDMI + Thunderbolt 3 (TB3 pro lo menos trabaja como una salida de video, No sé de otras funcionalidades como eGPU)
 - Apoyo de la cámara 10.14.0
-- Trackpad con nativo gestos via VoodooI2c (usa gestos de cinco dedos como una substit)
+- Trackpad con nativo gestos via VoodooI2c (se puede utilizar gestos de 3 dedos)
 - Pantalla táctil (La utilíza como un trackpad grande)
 - porcentaje de batería (con ACPIBatteryManager)
-- Bluetooth (Not es estable, tiene que reincinar el ordenador desde Windows a macOS)
-- administración de energía (con CPUFriend and CPUFriendProvider)
-- Wifi con USB
+- Bluetooth (esta en fase beta aun)
+- Administración de energía (con CPUFriend y CPUFriendProvider)
+- WIFI con USB
 
-## Los que no funciona:
-- Brillo y modo suspensión (La causa es probablemente Coffeelake gráficos)
-- dGPU (No se apoya Nvidia Optimus en MacOS)
-- eGPU (no he probado)
-- sensor de huellas dactilares
-- Interno Intel Wifi
+## Lo que no funciona:
+- Brillo y modo suspensión (La causa es probablemente Coffeelake)
+- dGPU (No soporta Nvidia Optimus en MacOS)
+- eGPU (no lo he probado)
+- Sensor de huellas dactilares
+- Tarjeta de WIFI interna
 
-## Vamonos!
+## Manos a la obra!
 
 ### Lo que necesitas:
 - Huawei Matebook X Pro (i7 o i5, no he probado macOS en el i5)
@@ -51,34 +47,44 @@ Continúa bajo su cuenta y riesgo.
 - 8GB USB
 - USB Wifi externo
 - Estación USB C (para conectar a un ratón external)
-- un ratón
+- Un ratón
 
 ### BIOS Settings
 - f2 es para prender a BIOS
-- f12 es para cambiar el aparato de boot
-- Qualquier versión de BIOS es bueno, pero estoy usando el 1.18
-- Restaura el valor de defecto
-- Apaga Secure boot
+- f12 para seleccionar el dispositivo de arranque.
+- Cualquier versión de BIOS esta bien, pero estoy usando el 1.18
+- Restaura los valores por defecto
+- Desactiva Secure boot
 - No se permite cambiar los valores como DVMT del BIOS de Matebook, no se puede EFI tool.
 
-## Pre-Instalar:
+## Pre-instalacion:
 Antes de instalar macOS, es una buena idea a hacer una copia de seguridad de tus archivos en Windows.
 
-You can also leave Windows intact, but it can get tricky. Read here for more information: 
+Puedes dejar Windows intacto, pero puede resultar complicado. Lea aca para mas informacion: 
 http://www.tonymacx86.com/multi-booting/133940-mavericks-windows-8-same-drive-without-erasing.html
 
-This guide for creating USB and installing using Clover UEFI works well for this laptop: 
-https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
+## Instalar sin una laptop Mac
 
-For the installation purposes, please use the HD620 plist that rehabman provides in his guide for your installation USB.
+1. Descargara [gibMacOS Scripts](https://github.com/corpnewt/gibMacOS)
+2. Correr `gibMacOS.bat`
+3. Correr `MakeInstall.bat`
+4. Copiar los archivos de este repo a la unidad USB.
+>  Puedes copiar el driver del WIFI USB
+5. Conecte su laptop a internet mediante un cable Ethernet, en caso contrario no podra instalarlo.
+6. Arranca desde el USB y selecciona `"Boot macOS install from OS X Base System"`
+7. Cuando se reinicie, seleccione `"Boot macOS from <your_drive_name>"`
 
-***Set config.plist/Graphics/ig-platform-id=0x12345678 for installation.***
+## Instalar con una laptop Mac
 
-I ended up wiping windows and installing it afterwards, if you do so, fingerprint sensor will stop working, please follow the guide from this link:
-http://bradshacks.com/matebook-x-pro-fingerprint/
-
-Install macOS according to post 2 of the guide:
-https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/
+1. Descargue `"Install macOs Catalina"` del AppStore
+2. Inserte su unidad USB y ejecute los siguientes comandos:
+   a. `diskutil list` y verifique el numero de su unidad USB (por ejemplo disk2)
+   b. `diskutil partitionDisk /dev/disk2 2 MBR FAT32 "CLOVER EFI" 200Mi HFS+J "install_osx" R`, generara los volumenes correspondientes.
+   c. `sudo "/Applications/Install macOS Catalina.app/Contents/Resources/createinstallmedia" --volume  /Volumes/install_osx --nointeraction`, copiara los archivos necesarios para la instalacion de macOs.
+   d. `sudo diskutil rename "Install macOS Catalina" install_osx`, cambiara el nombre del volumen
+3. Copiar la carpeta Clover del repo en el volumen Clover de la unidad USB
+4. Arranca desde el USB y selecciona `"Boot macOS install from install_osx"` (no es necesario conexion a internet)
+5. Cuando se reinicie, seleccione `"Boot macOS from <your_drive_name>"`
 
 Post Installation
 
