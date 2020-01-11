@@ -33,7 +33,7 @@ Queda bajo su resposabilidad cualquier problema surgido.
 - WIFI con USB
 
 ## Lo que no funciona:
-- Brillo y modo suspensión (La causa es probablemente Coffeelake)
+- Modo suspensión (La causa es probablemente el bluetooth kext)
 - dGPU (No soporta Nvidia Optimus en MacOS)
 - eGPU (no lo he probado)
 - Sensor de huellas dactilares
@@ -86,45 +86,24 @@ http://www.tonymacx86.com/multi-booting/133940-mavericks-windows-8-same-drive-wi
 4. Arranca desde el USB y selecciona `"Boot macOS install from install_osx"` (no es necesario conexion a internet)
 5. Cuando se reinicie, seleccione `"Boot macOS from <your_drive_name>"`
 
-Post Installation
+## Post-installation:
 
-You should now be at your desktop.
+1. Descargue Clover Configurator y monte la unidad EFI
+2. Instale el driver del WIFI USB
+3. Ejecute `sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-hackintosh/master/onekey_installer.sh)"` en la terminal
+4. Reinicie y listo!
 
-Download
-- Clover Configurator Pro
-	https://github.com/Micky1979/Clover-Configurator-Pro/blob/master/Updates/CCP_v1.4.1.zip?raw=true
-- USB Wi-fi Drivers
-- Newest Clover Bootloader, and install it to your boot disk
-	https://sourceforge.net/projects/cloverefiboot/
+Ya deberia tener funcionando su Huawei Matebook X Pro con macOs.
 
-Mount EFI partition if not mounted already
-
-Clone the repository via terminal or download it and swap the CLOVER folder downloaded for the one in your EFI directory.
-
-***Note if you have the i5 version, or any other configurations of the laptop sold exclusively in China***, you should:
-- delete the DSDT.aml file in /Volumes/EFI/EFI/CLOVER/ACPI/patched and generate your own via pressing f4 	at the clover bootscreen.
-- For i5 models: you have to make a custom CPUFriendProvider for Power Management by following this 		guide:
-	https://github.com/PMheart/CPUFriend/blob/master/Instructions.md
-
-Reboot
-
-You should have a half functioning Matebook X Pro Hackintosh by now. 
-
-Known Problems and Partial Solutions:
-- Brightness not working: download brightness slider from the App Store, it doesn't change the actual 		brightness, but it pleases the eye since it changes the white spot level or something along 		those lines.
-	https://itunes.apple.com/us/app/brightness-slider/id456624497?mt=12
-- Sleep doesn't work: after waking from a sleep (closing the lid), your computer will wake and you will 	see a graphics glitch. This should be due to Coffeelake spoofing. We are trying to fix this. 
-- Bluetooth: you will need a copy of 10.13.6's IOBluetoothFamily.kext and install it to S/L/E via 		kextbeast.
-
-### Credits:
-- Darren_Pan on reddit
-- midi and Maemo on discord
-- Chinese Matebook X Pro Hackintosh community
-- Spanish Matebook X Pro Hackintosh community
-- All the developers who developed the kexts used in this guide.
+### Creditos:
+- Darren_Pan de Reddit
+- midi and Maemo de Discord
+- Comunidad Chinese Matebook X Pro Hackintosh
+- Comunidad Spanish Matebook X Pro Hackintosh
+- A todos los desarrolladores que desarrollaron los kexts utilizados en esta guia.
 
 ## Ayúdame por favor
-Si quieres ayudar un estudiante más pobre, me debes ayudar. :)
+Si quieres ayudar un estudiante pobre, seleccione alguno de estos metodos. :)
 
 - PayPal:
     https://www.paypal.me/gnodipac886#%20MatebookXPro-hackintosh
