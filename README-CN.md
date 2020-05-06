@@ -15,6 +15,12 @@
 - Nvidia GTX MX 150 / Intel UHD 620
 - 3K 显示屏 @ 3000x2000
 - 512 Gb 东芝固态硬盘 (Not tested on Liteon SSDs yet)
+亲测Liteon CA3 需修改KEXTS补丁：
+	Name*: IONVMeFamily
+	Find* [HEX]: f6c1100f 85410100 00
+	Replace* [HEX]: f6c1020f 85410100 00
+	Comment: IONVMeFamily Preferred Block Size 0x10 -> 0x02 (c) Pike R. Alpha implemented by syscl adapted for 10.13.x-10.14 by Ricky
+	MatchOS: 10.14
 - USB Wifi: Edimax N150
 
 ## 能用的功能:
