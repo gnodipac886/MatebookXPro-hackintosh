@@ -137,7 +137,7 @@
 					<key>Comment</key>
 					<string>Rename _CRS to XCRS (Device TPL1)</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>X0NSUw==</data>
 					<key>Replace</key>
