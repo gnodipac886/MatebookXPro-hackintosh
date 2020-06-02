@@ -158,6 +158,16 @@ $ tce-load -wil bluez usbutils firmware-intel
 
 # Updates
 
+### 6/1/2020: Minor adjustments
+> this update was largely based on the work of [profzei](https://github.com/profzei/Matebook-X-Pro-2018), please, please check him out and star his repo too
+- main update: Intel-WiFi is now supported, due to the limited support of this repo, please follow the steps below:
+1. In order to setup WiFi, please run my wifiLaunch.command script, this saves your password into the kext
+2. After the initial setup, you can just run loadWiFi.sh script
+3. Whenever you want to connect to a different WiFi, please run wifiLaunch.command again
+- for more information about this update, please check out [profzei's repo](https://github.com/profzei/Matebook-X-Pro-2018), even though his repo is based off of mine, he has done tremendous amounts of work on his own to cover for the time that I've been absent. He's done lots of backend work to make this laptop run smoother. Please drop him a star on his repo if you have the chance!
+- I've been working OC support, will come back soon! But first, I've got a summer internship :) wish me luck! 
+
+
 ### 1/1/2020: Update of the Decade 
 > (I've worked really really hard on this one, so please feel free to help a broke student out [here](https://github.com/gnodipac886/MatebookXPro-hackintosh#help-a-broke-student-out))
 - Fixed battery draining during sleep cause by bluetooth chip

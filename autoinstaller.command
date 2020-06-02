@@ -87,6 +87,36 @@ function disableHibernation()
 
 }
 
+function setupWifi()
+{
+	echo "-------------------------"
+    echo "**** Setup WiFi Now? ****"
+    echo "-------------------------"
+    read -p "Type y/n : " lfm_selection
+    case "${lfm_selection}" in
+    y)
+    BASEDIR=$(dirname $0)
+	cd ${BASEDIR}/Intel-WiFi/
+	./wifiLaunch.command
+    exit
+    ;;
+
+    n)
+    echo "To setup WiFi, please go to Intel-WiFi folder, and run wifiLaunch.command"
+    sleep 3
+    exit
+    ;;
+
+    *)
+    echo "Please press y or n lol"
+    echo "Exiting"
+    sleep 1
+    exit
+
+;;
+esac
+}
+
 function restart()
 {
     echo "----------------------"
@@ -124,6 +154,7 @@ function main()
     disableHibernation
 	checkEFI
     checkFiles
+    setupWifi
     restart
 }
 
