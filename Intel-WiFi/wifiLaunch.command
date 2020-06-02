@@ -10,8 +10,8 @@ read wifiName
 echo Type in WiFi password:
 read -s wifiPass
 
-/usr/libexec/PlistBuddy -c "Set :IOKitPersonalities:AppleIntelWiFi:IFConfig:NWID $wifiName" AppleIntelWiFi.kext/Contents/Info.plist
-/usr/libexec/PlistBuddy -c "Set :IOKitPersonalities:AppleIntelWiFi:IFConfig:WPAKEY $wifiPass" AppleIntelWiFi.kext/Contents/Info.plist
+/usr/libexec/PlistBuddy -c "Set :IOKitPersonalities:AppleIntelWiFi:IFConfig:NWID $wifiName" Info.plist
+/usr/libexec/PlistBuddy -c "Set :IOKitPersonalities:AppleIntelWiFi:IFConfig:WPAKEY $wifiPass" Info.plist
 
 cd ${BASEDIR}
 rm -r AppleIntelWiFi.kext-0523.zip
