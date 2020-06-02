@@ -24,6 +24,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 - Builtin Bluetooth: Intel Wireless Bluetooth 8275
 
 ## What works:
+- Intel WiFi (AC8275)
 - Intel UHD 620 Graphics Acceleration
 - Brightness
 - Sleep
@@ -35,7 +36,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 - Battery Percentage
 - Bluetooth (Reboot from Widows required - should persist after single reboot)
 - Power Management - I'm getting around 8-9 hours.
-- Wifi via USB dongle
 - Liton SSDs are now supported.
 - HDMI 2.0 support, up to two 4K @60Hz monitors. 
 
@@ -43,7 +43,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 - dGPU (Nvidia Optimus not supported on MacOS)
 - eGPU (not tested)
 - Fingerprint Sensor
-- Intel Wifi (soldered onto the motherbaord)
 - As of right now, Samgsung PM981 SSDs are not supported.
 
 ## Let's Get Started
@@ -52,7 +51,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 - Huawei Matebook X Pro (either i7 or i5 model)
 - macOS or OS X downloaded from the Mac App Store
 - 8GB USB stick
-- External USB Wifi Dongle
 - USB C dock (for connecting to external mouse for initial setup)
 
 ### BIOS Settings
@@ -164,6 +162,7 @@ $ tce-load -wil bluez usbutils firmware-intel
 	1. In order to setup WiFi, please run my wifiLaunch.command script, this saves your password into the kext
 	2. After the initial setup, you can just run loadWiFi.sh script
 	3. Whenever you want to connect to a different WiFi, please run wifiLaunch.command again
+	> I am able to get 70+ mbps on my 100 mbps plan
 - for more information about this update, please check out [profzei's repo](https://github.com/profzei/Matebook-X-Pro-2018), even though his repo is based off of mine, he has done tremendous amounts of work on his own to cover for the time that I've been absent. He's done lots of backend work to make this laptop run smoother. Please drop him a star on his repo if you have the chance!
 - I've been working OC support, will come back soon! But first, I've got a summer internship :) wish me luck! 
 
