@@ -95,23 +95,6 @@ Clone the repository via terminal or download it and swap the CLOVER folder down
 
 ***Note if you have the i5 version, or any other configurations of the laptop sold exclusively in China***, you should:
 - For i5 models: you have to make a custom CPUFriendProvider for Power Management by following [this](https://github.com/stevezhengshiqi/one-key-cpufriend) guide:
-	
-### DSDT fixes
-Add the VoodooI2C patches (One for the SKL+ one for Windows 10 Patch)
-Add the following code to your DSDT.aml to fix brightness keys.
-```	
-into method label _Q0A replace_content
-begin
-// Brightness Down\n
-    Notify(\_SB.PCI0.LPCB.PS2K, 0x0405)\n
-end;
-into method label _Q0B replace_content
-begin
-// Brightness Up\n
-    Notify(\_SB.PCI0.LPCB.PS2K, 0x0406)\n
-end;
-```
-Reboot
 
 ## Dual Booting Fix
 
