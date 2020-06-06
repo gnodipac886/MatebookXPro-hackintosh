@@ -2,35 +2,33 @@
 
 > Adapted from [this comment](https://www.reddit.com/r/MatebookXPro/comments/gxdxlf/tried_out_the_hackintosh_on_my_mxp_2018/ft17vm7?utm_source=share&utm_medium=web2x) on reddit
 
-Here are the steps:
+1. Download gibMacOS-master.zip
 
-Download gibMacOS-master.zip
+2. Run: .\gibMacOS-master\gibMacOS.bat
 
-Run: .\gibMacOS-master\gibMacOS.bat
+3. Select option 1. It will download MacOS 10.15.5 (latest)
 
-Select option 1. It will download MacOS 10.15.5 (latest)
+4. When it finishes, quit
 
-When it finishes, quit
+5. Insert your USB drive and run the second script: .\gibMacOS-master\MakeInstall.bat
 
-Insert your USB drive and run the second script: .\gibMacOS-master\MakeInstall.bat
+6. Choose the number that matches your USB drive (probably 1)
 
-Choose the number that matches your USB drive (probably 1)
+7. After accepting the warning, then it asks you for the recovery image. Put the full path in for this file: "C:\temp\gibMacOS-master\macOS Downloads\publicrelease\001-12336 - 10.15.5 macOS Catalina\RecoveryHDMetaDmg.pkg"
 
-After accepting the warning, then it asks you for the recovery image. Put the full path in for this file: "C:\temp\gibMacOS-master\macOS Downloads\publicrelease\001-12336 - 10.15.5 macOS Catalina\RecoveryHDMetaDmg.pkg"
+8. Be sure to add the quotes (" ") around the path.
 
-Be sure to add the quotes (" ") around the path.
+9. Hit Enter and it will create a bootable drive. When it is done, quit.
 
-Hit Enter and it will create a bootable drive. When it is done, quit.
+10. Download gnodipac886's GitHub repo as a zip file. Unzip it and goto the folder: MatebookXPro-hackintosh-master\USB-EFI
 
-Download gnodipac886's GitHub repo as a zip file. Unzip it and goto the folder: MatebookXPro-hackintosh-master\USB-EFI
+11. In another Explorer window, open the USB drive (you should see something like a D: or E: drive with 200MB). Go in and open the "EFI" folder. Here, you should see two folders (BOOT, CLOVER).
 
-In another Explorer window, open the USB drive (you should see something like a D: or E: drive with 200MB). Go in and open the "EFI" folder. Here, you should see two folders (BOOT, CLOVER).
+12. Now, you want to copy the BOOT and CLOVER folders from the USB-EFI folder and overwrite the folders on the USB drive with the same name. Example:
 
-Now, you want to copy the BOOT and CLOVER folders from the USB-EFI folder and overwrite the folders on the USB drive with the same name. Example:
+13. USB-EFI\BOOT ==> E:\EFI\BOOT
 
-USB-EFI\BOOT ==> E:\EFI\BOOT
-
-USB-EFI\CLOVER ==> E:\EFI\CLOVER
+14. USB-EFI\CLOVER ==> E:\EFI\CLOVER
 
 Now you are ready to run the MacOS installer from the USB drive.
 
@@ -40,13 +38,13 @@ Once the install is completed, you will have a working install of MacOS, but it 
 
 Unfortunately, this is not a simple matter of copying like we did in step 11/12. The Mac EFI partition is hidden. You need to mount it with Clover Bootloader:
 
-Download and install Clover Bootloader. This will add an icon up by the Clock.
+1. Download and install Clover Bootloader. This will add an icon up by the Clock.
 
-Choose your disk (not install USB) and mount your drive, so that you can see the EFI partition.
+2. Choose your disk (not install USB) and mount your drive, so that you can see the EFI partition.
 
-Copy the BOOT and CLOVER files over to this partition (like we did in step 12 above).
+3. Copy the BOOT and CLOVER files over to this partition (like we did in step 12 above).
 
-Remove the installer USB drive and reboot. It should boot directly to MacOS.
+4. Remove the installer USB drive and reboot. It should boot directly to MacOS.
 
 ---
 
