@@ -61,7 +61,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 - Disable Secure boot
 - Matebook's BIOS is rewrite protected, EFI tool is useless against this BIOS.
 
-## Installing Without A MacOS Device
+## Installing with a macOS Device
+- Please refer to [this issue post](https://github.com/gnodipac886/MatebookXPro-hackintosh/issues/69#issue-548569933) for a detailed guide.
+
+## Installing Without a macOS Device
 
 > If you are having trouble with this method, [here](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/install-without-windows.md) is a more detailed guide.
 
