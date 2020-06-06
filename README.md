@@ -63,6 +63,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/gnodipac886/MatebookXPro-h
 
 ## Installing Without A MacOS Device
 
+> If you are having trouble with this method, [here](https://github.com/gnodipac886/MatebookXPro-hackintosh/blob/master/install-without-windows.md) is a more detailed guide.
+
 If you don't have a machine running MacOS, you can easily create your bootable USB following these steps:
 
 1. Download [gibMacOS Scripts](https://github.com/corpnewt/gibMacOS)
@@ -72,8 +74,6 @@ If you don't have a machine running MacOS, you can easily create your bootable U
 > You can copy over any WiFi dongle drivers or tools you may need onto your USB for post installation
 5. Boot from USB and select `"Boot macOS install from OS X Base System"`
 6. System will reboot choose option `"Boot macOS from <your_drive_name>"`
-
-Just follow through the steps and you should be good to go.
 
 ## Post Installation
 
