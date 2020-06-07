@@ -73,10 +73,11 @@ If you don't have a machine running MacOS, you can easily create your bootable U
 1. Download [gibMacOS Scripts](https://github.com/corpnewt/gibMacOS)
 2. Run `gibMacOS.bat`
 3. Run `MakeInstall.bat`
-4. Copy clover files from this repo onto your USB
+4. Open BOOT USB drive. Open EFI folder. Delete BOOT and CLOVER folders. Copy over the BOOT and CLOVER folders from Repo's USB-EFI folder.
 > You can copy over any WiFi dongle drivers or tools you may need onto your USB for post installation
 5. Boot from USB and select `"Boot macOS install from OS X Base System"`
 6. System will reboot choose option `"Boot macOS from <your_drive_name>"`
+> If stuck in a boot loop add -disablegfxfirmware to Clover Option Boot Args
 
 ## Post Installation
 
