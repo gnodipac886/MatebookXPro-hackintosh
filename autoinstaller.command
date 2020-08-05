@@ -89,20 +89,15 @@ function disableHibernation()
 
 function setupWifi()
 {
-	echo "-------------------------"
-    echo "**** Setup WiFi Now? ****"
-    echo "-------------------------"
-    read -p "Type y/n : " lfm_selection
-    case "${lfm_selection}" in
-    y)
+	
     BASEDIR=$(dirname $0)
-	cd ${BASEDIR}/Intel-WiFi/
-	./wifiLaunch.command
+	sudo mv ${BASEDIR}/Intel-WiFi/
+	./HeliPort.app ~Applications/HeliPort.app
     exit
     ;;
 
     n)
-    echo "To setup WiFi, please go to Intel-WiFi folder, and run wifiLaunch.command"
+    echo "To setup WiFi, please run the HeliPort app and set it to launch at startup"
     sleep 3
     exit
     ;;
